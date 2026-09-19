@@ -16,7 +16,7 @@ Legenda: [ ] pendente · [x] feito · (RM) Roki Media · (CL) cliente/Eduardo
 - [x] Extrair imagens e fontes Klavika do base64 para `assets/` (meta: página < 350 KB, LCP < 2,5 s no 4G)
 - [x] Converter imagens para WebP/AVIF com `srcset`; `font-display: swap` nas fontes
 - [ ] Reativar seção "Para quem é" como bloco próprio (opcional, conforme copy seção 6)
-- [ ] Revisar política de privacidade (rascunho no dialog `#privacy`) — (CL) validar texto
+- [x] Política de privacidade completa (LGPD) no dialog `#privacy` — (CL) validar texto final e informar CNPJ se quiser incluir
 - [x] Adicionar `robots.txt`, `sitemap.xml`, `og:image`, `_headers` (Cloudflare) e favicon em arquivo
 - [x] Motion system: scroll suave, reveal por scroll e hovers (ver `MOTION.md`)
 - [ ] Página `/obrigado` opcional (URL própria facilita conversão por URL no Google/Meta); hoje o obrigado é inline

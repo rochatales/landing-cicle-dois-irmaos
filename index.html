@@ -329,11 +329,20 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
 .legal{margin-top:36px;padding-top:20px;border-top:1px solid #333;font-size:.82rem;color:#a8a8a8;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
 .legal button{background:none;border:0;padding:0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer}
 @media(max-width:820px){footer .cols{grid-template-columns:1fr}}
-dialog{max-width:640px;width:calc(100% - 32px);border:0;border-radius:28px;padding:28px;background:#fff;color:var(--ink);font-family:var(--font)}
+dialog{max-width:680px;width:calc(100% - 32px);max-height:calc(100dvh - 32px);border:0;border-radius:28px;padding:0;background:#fff;color:var(--ink);font-family:var(--font);overflow:hidden}
+.pp{max-height:calc(100dvh - 32px);overflow-y:auto;padding:24px 28px 28px;font-weight:300;line-height:1.5}
+.pp-head{display:flex;justify-content:space-between;align-items:center;gap:12px;position:sticky;top:0;background:#fff;padding-bottom:8px;margin-bottom:4px}
+.pp-x{width:36px;height:36px;border-radius:50%;border:0;background:var(--soft);font:300 1.6rem/1 var(--font);cursor:pointer;transition:background var(--fast),transform var(--med) var(--ease)}
+.pp-x:hover{background:var(--red);color:#fff;transform:rotate(90deg)}
+.pp-meta{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);font-weight:500;margin-bottom:14px}
+.pp h4{margin:22px 0 6px;font-weight:700;text-transform:uppercase;font-size:.95rem;letter-spacing:.02em}
+.pp ul{margin:8px 0 0;padding-left:20px;display:grid;gap:6px}
+.pp li,.pp p{font-size:.95rem}
+.pp a{color:var(--red);font-weight:500}
 dialog::backdrop{background:rgba(0,0,0,.6)}
-dialog h3{font-size:1.5rem;margin-bottom:12px}
-dialog p{font-size:.95rem;margin-top:10px}
-dialog .btn{margin-top:18px}
+dialog h3{font-size:1.5rem}
+dialog p+p{margin-top:10px}
+dialog .btn{margin-top:24px}
 
 /* ---------- sticky mobile CTA ---------- */
 .sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(17,17,17,.96);display:none;transform:translateY(110%);transition:transform var(--med) var(--ease)}
@@ -629,14 +638,66 @@ dialog .btn{margin-top:18px}
 
 <div class="sticky" id="sticky"><a class="btn" href="#baixar" data-cta>Baixar o guia grátis <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 12 H5 M11 5 L4 12 L11 19"/></svg></a></div>
 
-<dialog id="privacy">
-  <h3>Política de privacidade</h3>
-  <p><b>Quem trata os dados:</b> Cicle Dois Irmãos, Av. Gustavo Jardim, 121 - Centro, Resende - RJ.</p>
-  <p><b>Quais dados:</b> nome, e-mail, WhatsApp e os interesses que você marcar no formulário, além de informações técnicas de navegação e da campanha de origem (UTM).</p>
-  <p><b>Para quê:</b> enviar o guia, responder ao seu contato e, se você aceitou, enviar comunicações sobre os assuntos que marcou. Você pode pedir para parar a qualquer momento.</p>
-  <p><b>Seus direitos (LGPD):</b> acessar, corrigir, portar e pedir a exclusão dos seus dados, ou retirar o consentimento, pelo WhatsApp (24) 98865-8380.</p>
-  <p><b>Compartilhamento:</b> não vendemos seus dados. Usamos ferramentas de medição e anúncios (Google, Meta, TikTok) para entender o desempenho das campanhas.</p>
-  <button class="btn sm" type="button" id="privacy-close">Fechar</button>
+<dialog id="privacy" aria-labelledby="privacy-title">
+  <div class="pp">
+    <div class="pp-head"><h3 id="privacy-title">Política de privacidade</h3><button class="pp-x" type="button" id="privacy-close" aria-label="Fechar">×</button></div>
+    <p class="pp-meta">Cicle Dois Irmãos · cicledoisirmaos.com.br · Atualizada em 19 de setembro de 2026</p>
+    <p>Esta política explica, em linguagem simples, quais dados coletamos nesta página, para que usamos, com quem compartilhamos e como você pode exercer seus direitos, conforme a Lei Geral de Proteção de Dados (Lei 13.709/2018, LGPD).</p>
+
+    <h4>1. Quem trata os dados</h4>
+    <p>Cicle Dois Irmãos, Av. Gustavo Jardim, 121 - Centro, Resende - RJ, CEP 27511-360, é a controladora dos dados. Contato para assuntos de privacidade: WhatsApp <a href="https://wa.me/5524988658380" target="_blank" rel="noopener">(24) 98865-8380</a>.</p>
+
+    <h4>2. Quais dados coletamos</h4>
+    <ul>
+      <li><b>Dados que você informa no formulário:</b> nome, e-mail, WhatsApp e os interesses que marcar (bike tradicional, bike assistida, scooter elétrica, manutenção, Bike Fit, acessórios, revisão).</li>
+      <li><b>Dados da campanha de origem:</b> parâmetros da URL que trouxe você até aqui (utm_source, utm_medium, utm_campaign, utm_content, utm_term) e identificadores de clique de anúncios (gclid, fbclid, ttclid).</li>
+      <li><b>Dados técnicos de navegação:</b> páginas visitadas, tipo de dispositivo e navegador, endereço IP aproximado e eventos de interação (envio do formulário, clique no WhatsApp), coletados pelas ferramentas de medição descritas no item 5.</li>
+      <li><b>Registro do consentimento:</b> data e hora em que você aceitou esta política ao enviar o formulário.</li>
+    </ul>
+
+    <h4>3. Para que usamos</h4>
+    <ul>
+      <li>Enviar o Guia Completo da Nova Mobilidade pelo site, por WhatsApp e por e-mail.</li>
+      <li>Responder ao seu contato e, se você pedir, agendar test drive, revisão ou Bike Fit.</li>
+      <li>Se você aceitou, enviar conteúdos e ofertas sobre os assuntos que marcou. Você pode pedir para parar a qualquer momento respondendo SAIR no WhatsApp ou pelo link de descadastro do e-mail.</li>
+      <li>Medir o desempenho das campanhas de anúncios e entender qual canal trouxe cada lead.</li>
+      <li>Cumprir obrigações legais e prevenir fraudes ou abusos.</li>
+    </ul>
+
+    <h4>4. Base legal</h4>
+    <p>Tratamos seus dados com base no seu <b>consentimento</b> (art. 7º, I, da LGPD), dado ao marcar a caixa de aceite do formulário, e, quando aplicável, na <b>execução de procedimentos preliminares</b> a um atendimento que você solicitou (art. 7º, V) e no nosso <b>legítimo interesse</b> em medir campanhas (art. 7º, IX), sempre respeitando seus direitos.</p>
+
+    <h4>5. Cookies e ferramentas de terceiros</h4>
+    <p>Esta página usa ferramentas de medição e anúncios de <b>Google</b> (Google Ads e Google Analytics), <b>Meta</b> (Pixel e API de Conversões, para Instagram e Facebook) e <b>TikTok</b> (Pixel). Elas podem gravar cookies e identificadores no seu navegador para atribuir conversões e formar públicos de remarketing. Os dados da campanha de origem ficam guardados temporariamente no armazenamento de sessão do seu navegador e são apagados quando você fecha a aba. Você pode bloquear cookies nas configurações do navegador; o formulário continua funcionando.</p>
+
+    <h4>6. Com quem compartilhamos</h4>
+    <p><b>Não vendemos seus dados.</b> Compartilhamos apenas com operadores que nos ajudam a prestar o serviço, cada um limitado à sua função:</p>
+    <ul>
+      <li>Sistema de gestão de leads e relacionamento (CRM), onde seu cadastro fica guardado.</li>
+      <li>Provedor de mensagens do WhatsApp Business, para o envio do guia e das conversas.</li>
+      <li>Provedor de e-mail, para o envio do guia e de conteúdos.</li>
+      <li>Google, Meta e TikTok, conforme o item 5.</li>
+      <li>Autoridades públicas, quando exigido por lei.</li>
+    </ul>
+    <p>Alguns desses provedores podem armazenar dados fora do Brasil. Nesses casos, exigimos garantias de proteção compatíveis com a LGPD.</p>
+
+    <h4>7. Por quanto tempo guardamos</h4>
+    <p>Mantemos seu cadastro enquanto você quiser receber nossos conteúdos ou enquanto houver um atendimento em andamento. Se você pedir a exclusão ou retirar o consentimento, apagamos os dados em até 15 dias, exceto o que precisarmos guardar por obrigação legal. Dados de medição de campanhas seguem os prazos de retenção de cada ferramenta.</p>
+
+    <h4>8. Seus direitos</h4>
+    <p>A qualquer momento você pode pedir: confirmação de que tratamos seus dados; acesso e cópia; correção de dados incompletos ou desatualizados; anonimização, bloqueio ou eliminação; portabilidade; informação sobre com quem compartilhamos; e revogação do consentimento. É só chamar no WhatsApp <a href="https://wa.me/5524988658380" target="_blank" rel="noopener">(24) 98865-8380</a>. Respondemos em até 15 dias. Se não ficar satisfeito, você pode recorrer à Autoridade Nacional de Proteção de Dados (ANPD).</p>
+
+    <h4>9. Segurança</h4>
+    <p>Esta página é servida por conexão criptografada (HTTPS) e os dados do formulário são enviados de forma protegida ao nosso sistema. Adotamos medidas técnicas e administrativas para evitar acesso não autorizado, mas nenhum sistema é totalmente à prova de incidentes; se algo acontecer e puder afetar você, avisaremos.</p>
+
+    <h4>10. Menores de idade</h4>
+    <p>Esta página é dirigida a maiores de 18 anos. Se soubermos que recebemos dados de menores sem autorização dos responsáveis, apagaremos o cadastro.</p>
+
+    <h4>11. Mudanças nesta política</h4>
+    <p>Podemos atualizar este texto para refletir mudanças na lei ou nos nossos processos. A data no topo indica a versão em vigor. Mudanças relevantes serão comunicadas pelos canais que você autorizou.</p>
+
+    <button class="btn sm" type="button" id="privacy-close-2">Entendi</button>
+  </div>
 </dialog>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BicycleStore","name":"Cicle Dois Irmãos","foundingDate":"1967","telephone":"+55-24-98865-8380","url":"https://cicledoisirmaos.com.br","address":{"@type":"PostalAddress","streetAddress":"Av. Gustavo Jardim, 121 - Centro","addressLocality":"Resende","addressRegion":"RJ","postalCode":"27511-360","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}],"sameAs":["https://www.instagram.com/cicledoisirmaos","https://www.tiktok.com/@cicledoisirmaos","https://www.facebook.com/cicledoisirmaos"]}</script>
@@ -822,7 +883,8 @@ dialog .btn{margin-top:18px}
   /* ============ Privacidade ============ */
   var dlg = document.getElementById("privacy");
   document.querySelectorAll("[data-privacy]").forEach(function(b){ b.addEventListener("click", function(){ if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open",""); }); });
-  var pc = document.getElementById("privacy-close"); if (pc) pc.addEventListener("click", function(){ dlg.close ? dlg.close() : dlg.removeAttribute("open"); });
+  document.querySelectorAll("#privacy-close, #privacy-close-2").forEach(function(pc){ pc.addEventListener("click", function(){ dlg.close ? dlg.close() : dlg.removeAttribute("open"); }); });
+  dlg.addEventListener("click", function(e){ if (e.target === dlg) dlg.close(); });
   var yr = document.getElementById("yr"); if (yr) yr.textContent = new Date().getFullYear();
 })();
 </script>
