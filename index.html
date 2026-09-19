@@ -926,10 +926,10 @@ dialog .btn{margin-top:24px}
       triggers.forEach(function(t){ t.kill(); }); triggers = [];
       gsap.set(panels, {clearProps:"transform,opacity"});
       var vh = window.innerHeight;
-      // No celular (< 860px, mesmo ponto de corte do CTA fixo) não há empilhamento: quase nenhuma seção cabe
-      // na tela e o efeito faria o fim do texto sumir antes de ser lido. As seções só se sobrepõem, como sempre.
-      document.documentElement.classList.toggle("stack", window.innerWidth >= 860);
-      if (window.innerWidth < 860) { ScrollTrigger.refresh(); return; }
+      // No celular (< 860px) as seções são mais altas que a tela, então o cartão preso NÃO esmaece: só encolhe
+      // de leve enquanto a próxima desliza por cima. Assim o fim do texto continua legível (dá para voltar e ler).
+      var mobile = window.innerWidth < 860;
+      document.documentElement.classList.add("stack");
       panels.forEach(function(panel, i){
         var next = panels[i+1]; if (!next) return;   // o último cartão (FAQ) não é coberto por ninguém
         var tl = gsap.timeline({
@@ -941,9 +941,9 @@ dialog .btn{margin-top:24px}
             endTrigger: next, end: "top top",   // termina quando a próxima cobre por completo
             pin: true, pinSpacing: false, scrub: true, anticipatePin: 1
           }
-        })
-        .fromTo(panel, {scale:1, opacity:1}, {scale:.85, opacity:.5, duration:.9, ease:"none"})
-        .to(panel, {opacity:0, duration:.1, ease:"none"});
+        });
+        if (mobile) tl.fromTo(panel, {scale:1}, {scale:.94, duration:1, ease:"none"});
+        else tl.fromTo(panel, {scale:1, opacity:1}, {scale:.85, opacity:.5, duration:.9, ease:"none"}).to(panel, {opacity:0, duration:.1, ease:"none"});
         triggers.push(tl.scrollTrigger);
       });
       ScrollTrigger.refresh();
