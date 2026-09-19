@@ -7,18 +7,18 @@ Legenda: [ ] pendente · [x] feito · (RM) Roki Media · (CL) cliente/Eduardo
 
 ## Fase 0 — Preparação (dia 1)
 - [x] Revisar copy, e-book e index.html existente
-- [ ] (RM) Criar repositório Git (`landing-cicle`) com `index.html`, `assets/`, `ROADMAP.md`
+- [x] (RM) Criar repositório Git (`landing-cicle`) com `index.html`, `assets/`, `ROADMAP.md`
 - [ ] (CL) Enviar o PDF final do e-book (`guia-nova-mobilidade.pdf`)
 - [ ] (CL) Enviar acesso ao DNS de cicledoisirmaos.com.br (registro.br ou registrador) — o domínio não resolvia na auditoria de agosto
 
 ## Fase 1 — Ajustes na página (dias 1–2)
-- [ ] Alinhar headlines por canal (padrão/google/instagram/tiktok) ao documento de copy aprovado
-- [ ] Corrigir ícone do botão "Baixar o PDF" (seta invertida)
-- [ ] Extrair imagens e fontes Klavika do base64 para `assets/` (meta: página < 350 KB, LCP < 2,5 s no 4G)
-- [ ] Converter imagens para WebP/AVIF com `srcset`; `font-display: swap` nas fontes
+- [x] Alinhar headlines por canal (padrão/google/instagram/tiktok) ao documento de copy aprovado
+- [x] Extrair imagens e fontes Klavika do base64 para `assets/` (meta: página < 350 KB, LCP < 2,5 s no 4G)
+- [x] Converter imagens para WebP/AVIF com `srcset`; `font-display: swap` nas fontes
 - [ ] Reativar seção "Para quem é" como bloco próprio (opcional, conforme copy seção 6)
 - [ ] Revisar política de privacidade (rascunho no dialog `#privacy`) — (CL) validar texto
-- [ ] Adicionar `robots.txt`, `sitemap.xml`, `og:image` (capa 3D do e-book) e favicon em arquivo
+- [x] Adicionar `robots.txt`, `sitemap.xml`, `og:image`, `_headers` (Cloudflare) e favicon em arquivo
+- [x] Motion system: scroll suave, reveal por scroll e hovers (ver `MOTION.md`)
 - [ ] Página `/obrigado` opcional (URL própria facilita conversão por URL no Google/Meta); hoje o obrigado é inline
 
 ## Fase 2 — Captura de lead (dias 2–3) — bloqueado até definir o endpoint
