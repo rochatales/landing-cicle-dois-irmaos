@@ -359,7 +359,7 @@ dialog .btn{margin-top:24px}
 .js [data-reveal].in{opacity:1;transform:none}
 .js [data-reveal].in:hover{transition-delay:0s}
 /* wallet card: cada seção fica presa e encolhe enquanto a próxima desliza por cima */
-.stack .sec,.stack footer{transform-origin:50% 50%;overflow:hidden;border-radius:var(--r)}
+.stack .sec{transform-origin:50% 50%;overflow:hidden;border-radius:var(--r)}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}.js [data-reveal]{opacity:1;transform:none}}
 </style>
 </head>
@@ -920,9 +920,9 @@ dialog .btn{margin-top:24px}
     if (reduce || !window.gsap || !window.ScrollTrigger) return;
     gsap.registerPlugin(ScrollTrigger);
     document.documentElement.classList.add("stack");
-    var panels = Array.prototype.filter.call(document.querySelectorAll("main > section.sec:not([hidden]), footer"), function(el){ return el.offsetParent !== null; });   // a hero fica de fora: rola normal e a seção "problema" desliza por cima dela
+    var panels = Array.prototype.filter.call(document.querySelectorAll("main > section.sec:not([hidden])"), function(el){ return el.offsetParent !== null; });   // hero e rodapé ficam de fora: a hero rola normal e o FAQ é o último cartão; o rodapé só sobrepõe como antes
     panels.forEach(function(panel, i){
-      var next = panels[i+1]; if (!next) return;   // o rodapé é o último cartão: ninguém o cobre
+      var next = panels[i+1]; if (!next) return;   // o último cartão (FAQ) não é coberto por ninguém
       gsap.timeline({
         scrollTrigger: {
           trigger: panel,
