@@ -359,9 +359,7 @@ dialog .btn{margin-top:24px}
 .js [data-reveal].in{opacity:1;transform:none}
 .js [data-reveal].in:hover{transition-delay:0s}
 /* wallet card: cada seção fica presa e encolhe enquanto a próxima desliza por cima */
-.stack main > section,.stack footer{transform-origin:50% 50%;overflow:hidden}
-.stack .sec,.stack footer{border-radius:var(--r)}
-.stack .hero{border-radius:0 0 var(--r) var(--r)}
+.stack .sec,.stack footer{transform-origin:50% 50%;overflow:hidden;border-radius:var(--r)}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}.js [data-reveal]{opacity:1;transform:none}}
 </style>
 </head>
@@ -922,7 +920,7 @@ dialog .btn{margin-top:24px}
     if (reduce || !window.gsap || !window.ScrollTrigger) return;
     gsap.registerPlugin(ScrollTrigger);
     document.documentElement.classList.add("stack");
-    var panels = Array.prototype.filter.call(document.querySelectorAll("main > section:not([hidden]), footer"), function(el){ return el.offsetParent !== null; });
+    var panels = Array.prototype.filter.call(document.querySelectorAll("main > section.sec:not([hidden]), footer"), function(el){ return el.offsetParent !== null; });   // a hero fica de fora: rola normal e a seção "problema" desliza por cima dela
     panels.forEach(function(panel, i){
       var next = panels[i+1]; if (!next) return;   // o rodapé é o último cartão: ninguém o cobre
       gsap.timeline({

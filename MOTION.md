@@ -15,7 +15,7 @@ Tudo é desligado com `prefers-reduced-motion: reduce` (transições, animaçõe
 Grupos com reveal: kicker/h2/lead de cada seção · 3 cards "jeitos de se mover" · 3 números (1967/2017/RETÜL) · capítulos · perfis · 4 itens Mantiqueira · destinos · serviços da loja · card Nero 6 · card da loja · CTA final · FAQ · colunas do rodapé.
 
 ## Empilhamento "wallet card" (GSAP ScrollTrigger 3.12.5, via cdnjs)
-Referência: codepen.io/GreenSock/pen/bGRdvMy. Cada seção (hero → FAQ) vira um cartão: fica presa (pin) enquanto a seção seguinte desliza por cima, encolhendo para 85% e esmaecendo até 50%, depois some. O rodapé é o último cartão e não é coberto.
+Referência: codepen.io/GreenSock/pen/bGRdvMy. Cada seção a partir de "problema" (problema → FAQ) vira um cartão; a hero fica de fora e rola normal, com a seção "problema" deslizando por cima dela: fica presa (pin) enquanto a seção seguinte desliza por cima, encolhendo para 85% e esmaecendo até 50%, depois some. O rodapé é o último cartão e não é coberto.
 
 | Regra | Detalhe |
 |---|---|
