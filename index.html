@@ -358,6 +358,10 @@ dialog .btn{margin-top:24px}
 .js [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity var(--slow) var(--ease),transform var(--slow) var(--ease);transition-delay:calc(var(--i,0) * 70ms)}
 .js [data-reveal].in{opacity:1;transform:none}
 .js [data-reveal].in:hover{transition-delay:0s}
+/* wallet card: cada seção fica presa e encolhe enquanto a próxima desliza por cima */
+.stack main > section,.stack footer{transform-origin:50% 50%;overflow:hidden}
+.stack .sec,.stack footer{border-radius:var(--r)}
+.stack .hero{border-radius:0 0 var(--r) var(--r)}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}.js [data-reveal]{opacity:1;transform:none}}
 </style>
 </head>
@@ -710,6 +714,8 @@ dialog .btn{margin-top:24px}
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BicycleStore","name":"Cicle Dois Irmãos","foundingDate":"1967","telephone":"+55-24-98865-8380","url":"https://cicledoisirmaos.com.br","address":{"@type":"PostalAddress","streetAddress":"Av. Gustavo Jardim, 121 - Centro","addressLocality":"Resende","addressRegion":"RJ","postalCode":"27511-360","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}],"sameAs":["https://www.instagram.com/cicledoisirmaos","https://www.tiktok.com/@cicledoisirmaos","https://www.facebook.com/cicledoisirmaos"]}</script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script>
 (function(){
   "use strict";
@@ -719,6 +725,28 @@ dialog .btn{margin-top:24px}
     whatsapp: "5524988658380",
     pdf: "guia-nova-mobilidade.pdf"                 // caminho do PDF no site
   };
+
+  /* Rolagem até um elemento. Com o empilhamento (GSAP pin) a seção pode estar em position:fixed,
+     então a posição real é a do .pin-spacer que a envolve, não a do elemento. */
+  function docTop(el){
+    var ref = (el.parentElement && el.parentElement.classList.contains("pin-spacer")) ? el.parentElement : el;
+    var sec = el.closest && el.closest("main > section, footer");
+    if (sec && sec !== el && sec.parentElement && sec.parentElement.classList.contains("pin-spacer")) {
+      // elemento dentro de uma seção presa: posição = spacer da seção + deslocamento interno
+      var inner = el.getBoundingClientRect().top - sec.getBoundingClientRect().top;
+      return sec.parentElement.getBoundingClientRect().top + window.scrollY + inner;
+    }
+    return ref.getBoundingClientRect().top + window.scrollY;
+  }
+  function scrollToEl(el, block){
+    var y = docTop(el) - (block === "center" ? Math.max(0, (window.innerHeight - el.offsetHeight) / 2) : 76);
+    window.scrollTo({top: Math.max(0, y), behavior: "smooth"});
+  }
+  document.addEventListener("click", function(e){
+    var a = e.target.closest && e.target.closest('a[href^="#"]'); if (!a) return;
+    var id = a.getAttribute("href").slice(1); var t = id && document.getElementById(id); if (!t) return;
+    e.preventDefault(); scrollToEl(t); try { history.replaceState(null, "", "#" + id); } catch(err){}
+  });
 
   var params = new URLSearchParams(location.search);
   var src = (params.get("utm_source") || "").toLowerCase();
@@ -789,7 +817,7 @@ dialog .btn{margin-top:24px}
       if (!ints.length) ok = false;
       var cMsg = form.querySelector("#"+pre+"ok-msg"); cMsg.textContent = $("ok").checked ? "" : "Precisamos do seu aceite para enviar o guia.";
       if (!$("ok").checked) ok = false;
-      if (!ok){ var first = form.querySelector(".err input, .msg:not(:empty)"); if (first && first.scrollIntoView) first.scrollIntoView({block:"center",behavior:"smooth"}); return; }
+      if (!ok){ var first = form.querySelector(".err input, .msg:not(:empty)"); if (first) scrollToEl(first, "center"); return; }
 
       var payload = Object.assign({
         nome: nome, email: email, whatsapp: "55" + zap, interesses: ints,
@@ -828,7 +856,7 @@ dialog .btn{margin-top:24px}
     html += '</div><p class="note">Siga também <a href="https://www.instagram.com/cicledoisirmaos" target="_blank" rel="noopener"><b>@cicledoisirmaos</b></a> no Instagram, TikTok e Facebook.</p>';
     box.innerHTML = html; box.hidden = false; form.hidden = true;
     var hd = box.previousElementSibling;
-    if (box.scrollIntoView) box.scrollIntoView({block:"center",behavior:"smooth"});
+    scrollToEl(box, "center");
   }
   function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
 
@@ -887,6 +915,31 @@ dialog .btn{margin-top:24px}
     var onScroll = function(){ top.classList.toggle("scrolled", window.scrollY > 24); };
     window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
   })();
+
+  /* ============ Motion: empilhamento "wallet card" das seções (GSAP ScrollTrigger) ============ */
+  window.addEventListener("load", function(){
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce || !window.gsap || !window.ScrollTrigger) return;
+    gsap.registerPlugin(ScrollTrigger);
+    document.documentElement.classList.add("stack");
+    var panels = Array.prototype.filter.call(document.querySelectorAll("main > section:not([hidden]), footer"), function(el){ return el.offsetParent !== null; });
+    panels.forEach(function(panel, i){
+      var next = panels[i+1]; if (!next) return;   // o rodapé é o último cartão: ninguém o cobre
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: panel,
+          // seção mais alta que a janela: rola normal e só "trava" quando a base encosta na base da janela;
+          // seção mais baixa: trava assim que o topo encosta no topo. Nos dois casos a próxima seção desliza por cima.
+          start: function(){ return panel.offsetHeight > window.innerHeight ? "bottom bottom" : "top top"; },
+          endTrigger: next, end: "top top",   // termina quando a próxima cobre por completo
+          pin: true, pinSpacing: false, scrub: true, anticipatePin: 1, invalidateOnRefresh: true
+        }
+      })
+      .fromTo(panel, {scale:1, opacity:1}, {scale:.85, opacity:.5, duration:.9, ease:"none"})
+      .to(panel, {opacity:0, duration:.1, ease:"none"});
+    });
+    ScrollTrigger.refresh();
+  });
 
   /* ============ Privacidade ============ */
   var dlg = document.getElementById("privacy");

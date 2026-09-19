@@ -14,6 +14,17 @@ Tudo é desligado com `prefers-reduced-motion: reduce` (transições, animaçõe
 
 Grupos com reveal: kicker/h2/lead de cada seção · 3 cards "jeitos de se mover" · 3 números (1967/2017/RETÜL) · capítulos · perfis · 4 itens Mantiqueira · destinos · serviços da loja · card Nero 6 · card da loja · CTA final · FAQ · colunas do rodapé.
 
+## Empilhamento "wallet card" (GSAP ScrollTrigger 3.12.5, via cdnjs)
+Referência: codepen.io/GreenSock/pen/bGRdvMy. Cada seção (hero → FAQ) vira um cartão: fica presa (pin) enquanto a seção seguinte desliza por cima, encolhendo para 85% e esmaecendo até 50%, depois some. O rodapé é o último cartão e não é coberto.
+
+| Regra | Detalhe |
+|---|---|
+| Início do pin | Seção mais alta que a janela: quando a base encosta na base da janela (`bottom bottom`) — o conteúdo rola normal antes. Seção mais baixa: quando o topo encosta no topo (`top top`). |
+| Fim do pin | Quando o topo da próxima seção chega ao topo da janela (`endTrigger: next, end: "top top"`). |
+| `pinSpacing: false` | A página não ganha altura extra; as âncoras continuam nas posições naturais. |
+| Âncoras e formulário | Como a seção presa fica `position: fixed`, a rolagem para `#baixar`, `#baixar-2`, erros do formulário e o bloco de obrigado usa a posição do `.pin-spacer` (função `scrollToEl`). |
+| Sem GSAP / reduced-motion | A classe `html.stack` não é aplicada e a página rola normal, com as seções sobrepostas como antes. |
+
 ## Entrada (load)
 | Elemento | Animação |
 |---|---|
