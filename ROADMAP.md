@@ -7,7 +7,7 @@ Legenda: [ ] pendente · [x] feito · (RM) Roki Media · (CL) cliente/Eduardo
 
 ## Fase 0 — Preparação (dia 1)
 - [x] Revisar copy, e-book e index.html existente
-- [x] (RM) Criar repositório Git (`landing-cicle`) com `index.html`, `assets/`, `ROADMAP.md`
+- [x] (RM) Repositório Git: https://github.com/rochatales/landing-cicle-dois-irmaos (privado)
 - [ ] (CL) Enviar o PDF final do e-book (`guia-nova-mobilidade.pdf`)
 - [ ] (CL) Enviar acesso ao DNS de cicledoisirmaos.com.br (registro.br ou registrador) — o domínio não resolvia na auditoria de agosto
 
