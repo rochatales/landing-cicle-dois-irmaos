@@ -26,7 +26,7 @@ Grupos com reveal: kicker/h2/lead de cada seção · 3 cards "jeitos de se mover
 | `.btn` (todos os CTAs) | sobe 2px + sombra; seta desliza 5px para a direita; `:active` comprime (.98) |
 | `.btn.light` (header) | sombra |
 | Logo no header | scale 1.05 |
-| WhatsApp no header | fundo translúcido + ícone gira -12° e cresce |
+| WhatsApp no header | fundo translúcido (sem animação no ícone) |
 | Capa do e-book `.cover` | endireita (rotate 0), sobe 6px, scale 1.02, sombra maior |
 | Inputs `.field input` | borda cinza no hover; no focus borda preta + sombra |
 | Chips de interesse `.chip` | borda preta + sobe 1px; `:active` comprime |
