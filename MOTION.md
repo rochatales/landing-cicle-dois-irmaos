@@ -23,6 +23,7 @@ Referência: codepen.io/GreenSock/pen/bGRdvMy. Cada seção a partir de "problem
 | Fim do pin | Quando o topo da próxima seção chega ao topo da janela (`endTrigger: next, end: "top top"`). |
 | `pinSpacing: false` | A página não ganha altura extra; as âncoras continuam nas posições naturais. |
 | Âncoras e formulário | Como a seção presa fica `position: fixed`, a rolagem para `#baixar`, `#baixar-2`, erros do formulário e o bloco de obrigado usa a posição do `.pin-spacer` (função `scrollToEl`). |
+| Celular (< 860 px) | Sem empilhamento: as seções são mais altas que a tela e o efeito fazia o fim do texto sumir antes de ser lido. As seções só se sobrepõem. A regra é reavaliada em rotação/redimensionamento real (não no sobe-desce da barra de endereço). |
 | Sem GSAP / reduced-motion | A classe `html.stack` não é aplicada e a página rola normal, com as seções sobrepostas como antes. |
 
 ## Entrada (load)

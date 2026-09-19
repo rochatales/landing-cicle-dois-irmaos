@@ -919,24 +919,44 @@ dialog .btn{margin-top:24px}
     var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce || !window.gsap || !window.ScrollTrigger) return;
     gsap.registerPlugin(ScrollTrigger);
-    document.documentElement.classList.add("stack");
-    var panels = Array.prototype.filter.call(document.querySelectorAll("main > section.sec:not([hidden])"), function(el){ return el.offsetParent !== null; });   // hero e rodapé ficam de fora: a hero rola normal e o FAQ é o último cartão; o rodapé só sobrepõe como antes
-    panels.forEach(function(panel, i){
-      var next = panels[i+1]; if (!next) return;   // o último cartão (FAQ) não é coberto por ninguém
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: panel,
-          // seção mais alta que a janela: rola normal e só "trava" quando a base encosta na base da janela;
-          // seção mais baixa: trava assim que o topo encosta no topo. Nos dois casos a próxima seção desliza por cima.
-          start: function(){ return panel.offsetHeight > window.innerHeight ? "bottom bottom" : "top top"; },
-          endTrigger: next, end: "top top",   // termina quando a próxima cobre por completo
-          pin: true, pinSpacing: false, scrub: true, anticipatePin: 1, invalidateOnRefresh: true
-        }
-      })
-      .fromTo(panel, {scale:1, opacity:1}, {scale:.85, opacity:.5, duration:.9, ease:"none"})
-      .to(panel, {opacity:0, duration:.1, ease:"none"});
+    ScrollTrigger.config({ignoreMobileResize:true});   // barra de endereço do celular não recalcula nada
+    var panels = Array.prototype.filter.call(document.querySelectorAll("main > section.sec:not([hidden])"), function(el){ return el.offsetParent !== null; });   // hero e rodapé ficam de fora
+    var triggers = [];
+    function build(){
+      triggers.forEach(function(t){ t.kill(); }); triggers = [];
+      gsap.set(panels, {clearProps:"transform,opacity"});
+      var vh = window.innerHeight;
+      // No celular (< 860px, mesmo ponto de corte do CTA fixo) não há empilhamento: quase nenhuma seção cabe
+      // na tela e o efeito faria o fim do texto sumir antes de ser lido. As seções só se sobrepõem, como sempre.
+      document.documentElement.classList.toggle("stack", window.innerWidth >= 860);
+      if (window.innerWidth < 860) { ScrollTrigger.refresh(); return; }
+      panels.forEach(function(panel, i){
+        var next = panels[i+1]; if (!next) return;   // o último cartão (FAQ) não é coberto por ninguém
+        var tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: panel,
+            // seção mais alta que a janela: rola normal e só "trava" quando a base encosta na base da janela;
+            // seção mais baixa: trava assim que o topo encosta no topo. Nos dois casos a próxima desliza por cima.
+            start: panel.offsetHeight > vh ? "bottom bottom" : "top top",
+            endTrigger: next, end: "top top",   // termina quando a próxima cobre por completo
+            pin: true, pinSpacing: false, scrub: true, anticipatePin: 1
+          }
+        })
+        .fromTo(panel, {scale:1, opacity:1}, {scale:.85, opacity:.5, duration:.9, ease:"none"})
+        .to(panel, {opacity:0, duration:.1, ease:"none"});
+        triggers.push(tl.scrollTrigger);
+      });
+      ScrollTrigger.refresh();
+    }
+    build();
+    var lastW = window.innerWidth, lastH = window.innerHeight, rt;
+    window.addEventListener("resize", function(){
+      clearTimeout(rt);
+      rt = setTimeout(function(){
+        // reconstrói só em mudança real (rotação, janela redimensionada), não no sobe-desce da barra do navegador
+        if (window.innerWidth !== lastW || Math.abs(window.innerHeight - lastH) > 150) { lastW = window.innerWidth; lastH = window.innerHeight; build(); }
+      }, 200);
     });
-    ScrollTrigger.refresh();
   });
 
   /* ============ Privacidade ============ */
