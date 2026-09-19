@@ -1,0 +1,831 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guia da Nova Mobilidade | Cicle Dois Irmãos</title>
+<meta name="description" content="Bike, bike elétrica ou scooter? Baixe grátis o Guia Completo da Nova Mobilidade, da Cicle Dois Irmãos: 4 capítulos para escolher, usar e cuidar bem. Desde 1967 em Resende.">
+<meta property="og:title" content="O Guia Completo da Nova Mobilidade | Cicle Dois Irmãos">
+<meta property="og:description" content="Do urbano à trilha: como escolher e cuidar da sua bike, MTB, bike assistida (elétrica) ou scooter elétrica. Grátis.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cicledoisirmaos.com.br/">
+<meta name="theme-color" content="#C50021">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="canonical" href="https://cicledoisirmaos.com.br/">
+<meta property="og:image" content="https://cicledoisirmaos.com.br/assets/img/capa-guia.jpg">
+<meta property="og:image:width" content="909"><meta property="og:image:height" content="1287">
+<meta property="og:locale" content="pt_BR">
+<link rel="preload" href="assets/fonts/Klavika-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Klavika-Light.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/capa-guia-480.webp" as="image" type="image/webp">
+<!-- Cole aqui as tags de rastreamento: Google (gtag/GTM), Meta Pixel e TikTok Pixel. Eventos já disparados pela página: generate_lead (dataLayer/gtag), fbq('track','Lead'), ttq.track('SubmitForm'), whatsapp_click. -->
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+
+@font-face{font-family:"Klavika";font-weight:300;font-style:normal;font-display:swap;src:url(assets/fonts/Klavika-Light.woff2) format("woff2")}
+@font-face{font-family:"Klavika";font-weight:500;font-style:normal;font-display:swap;src:url(assets/fonts/Klavika-Medium.woff2) format("woff2")}
+@font-face{font-family:"Klavika";font-weight:700;font-style:normal;font-display:swap;src:url(assets/fonts/Klavika-Bold.woff2) format("woff2")}
+
+:root{
+  --red:#C50021; --red-dk:#9E0019; --ink:#111111; --grey:#D9D9D9; --soft:#F2F2F2; --white:#FFFFFF; --mid:#565656;
+  --r:clamp(28px,5vw,64px);
+  --wrap:1180px;
+  --font:"Klavika","Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+:root{--ease:cubic-bezier(.22,1,.36,1);--fast:.18s;--med:.35s;--slow:.7s}
+[id]{scroll-margin-top:76px}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--font);font-weight:300;font-size:1.0625rem;line-height:1.5;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-weight:700;text-transform:uppercase;line-height:.98;letter-spacing:.005em;margin:0;text-wrap:balance}
+p{margin:0}
+strong,b{font-weight:500}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.on-dark :focus-visible,.hero :focus-visible,.store :focus-visible,footer :focus-visible{outline-color:#fff}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:20px}
+.ic{width:1.25em;height:1.25em;flex:none}
+.ic-vehicle{width:100%;height:auto;display:block}
+
+/* ---------- layered sections ---------- */
+.sec{position:relative;margin-top:calc(var(--r) * -1);border-radius:var(--r) var(--r) 0 0;padding-block:calc(var(--r) + 40px) 64px}
+.kicker{font-weight:500;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:28px;height:3px;background:currentColor;border-radius:3px}
+.sec h2{font-size:clamp(1.9rem,4.4vw,3.2rem);margin-top:14px}
+.lead{font-size:clamp(1.05rem,1.6vw,1.25rem);max-width:60ch;margin-top:18px}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:12px;background:var(--red);color:#fff;border:0;border-radius:999px;padding:16px 26px 16px 30px;font:500 1rem/1 var(--font);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background var(--fast),transform var(--med) var(--ease),box-shadow var(--med) var(--ease)}
+.btn:hover{background:var(--red-dk);transform:translateY(-2px);box-shadow:0 10px 22px -10px rgba(0,0,0,.45)}
+.btn:active{transform:translateY(0) scale(.98);box-shadow:none;transition-duration:.08s}
+.btn .ic{width:1.3em;height:1.3em;transform:scaleX(-1);transition:transform var(--med) var(--ease)}
+.btn:hover .ic{transform:scaleX(-1) translateX(-5px)}
+.btn.light{background:#fff;color:var(--red)}
+.btn.light:hover{background:#fff;box-shadow:0 10px 22px -10px rgba(0,0,0,.5)}
+.btn.dark{background:var(--ink)}
+.btn.dark:hover{background:#333}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.ghost:hover{background:rgba(255,255,255,.14)}
+.btn.block{width:100%;justify-content:space-between}
+.btn[disabled]{opacity:.65;cursor:wait}
+.btn.sm{padding:12px 18px 12px 22px;font-size:.85rem}
+
+/* ---------- header ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--red);color:#fff;padding-block:10px;transition:box-shadow var(--med),padding var(--med)}
+.top.scrolled{box-shadow:0 8px 24px -12px rgba(0,0,0,.5);padding-block:6px}
+.top a[aria-label] img{transition:transform var(--med) var(--ease)}
+.top a[aria-label]:hover img{transform:scale(1.05)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.top img{height:40px;width:auto;display:block}
+.top nav{display:flex;align-items:center;gap:12px}
+.top .wa{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:500;font-size:.9rem;padding:8px 12px;border-radius:999px}
+.top .wa{transition:background var(--fast)}
+.top .wa:hover{background:rgba(255,255,255,.16)}
+.top .wa .ic{transition:transform var(--med) var(--ease)}
+.top .wa:hover .ic{transform:rotate(-12deg) scale(1.1)}
+.top .wa span{display:none}
+@media(min-width:720px){.top .wa span{display:inline}}
+
+/* ---------- hero ---------- */
+.hero{background:var(--red);color:#fff;padding-block:28px calc(var(--r) + 28px)}
+.hero .wrap{display:grid;gap:28px;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);align-items:start}
+.panel{background:var(--grey);color:var(--ink);border-radius:clamp(48px,9vw,120px) 36px 36px 36px;padding:clamp(28px,4vw,52px) clamp(20px,4vw,52px) clamp(24px,3vw,40px)}
+.panel{position:relative}
+.mark{position:absolute;top:clamp(16px,2.4vw,28px);right:clamp(16px,2.4vw,28px);width:clamp(34px,4vw,48px);display:block}
+.mark img{width:100%;height:auto;display:block}
+.hero .panel .seal{max-width:calc(100% - clamp(58px,7vw,84px))}
+.seal{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;border-radius:999px;padding:7px 14px;font-weight:500;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase}
+.seal .ic{width:1.1em;height:1.1em;color:#fff}
+.hero h1{font-size:clamp(1.9rem,4.4vw,3.4rem);margin-top:18px}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero .sub{margin-top:14px;font-size:clamp(1.02rem,1.5vw,1.2rem);max-width:52ch}
+.side{display:flex;flex-direction:column;align-items:center;gap:26px;padding-top:6px}
+.cover{position:relative;width:min(100%,340px);border-radius:14px;overflow:hidden;box-shadow:0 26px 50px -18px rgba(0,0,0,.55);transform:rotate(1.6deg);transition:transform var(--slow) var(--ease),box-shadow var(--slow) var(--ease)}
+.cover:hover{transform:rotate(0) translateY(-6px) scale(1.02);box-shadow:0 36px 60px -20px rgba(0,0,0,.6)}
+.hero .cover{animation:coverIn .9s var(--ease) .15s both}
+@keyframes coverIn{from{opacity:0;transform:rotate(-3deg) translateY(24px)}to{opacity:1;transform:rotate(1.6deg) translateY(0)}}
+.hero .panel{animation:panelIn .7s var(--ease) both}
+@keyframes panelIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.checks li{transition:transform var(--med) var(--ease)}
+.checks li:hover{transform:translateX(4px)}
+.dot{transition:transform var(--med) var(--ease),background var(--fast),color var(--fast)}
+.checks li:hover .dot,.svc li:hover .dot{transform:scale(1.12) rotate(-8deg)}
+.cover img{display:block;width:100%;height:auto}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:14px;width:100%;max-width:340px}
+.checks li{display:flex;gap:12px;align-items:flex-start;line-height:1.25}
+.checks b{display:block;font-weight:500;text-transform:uppercase;letter-spacing:.04em;font-size:.95rem}
+.checks span.t{font-size:.92rem}
+.dot{flex:none;width:30px;height:30px;border-radius:50%;background:#fff;color:var(--red);display:grid;place-items:center}
+.svc li{transition:transform var(--med) var(--ease)}
+.svc li:hover{transform:translateX(4px)}
+.dot .ic{width:16px;height:16px;stroke-width:3.2}
+.dot.red{background:var(--red);color:#fff}
+@media(max-width:900px){
+  .hero .wrap{grid-template-columns:1fr}
+  .side{flex-direction:column;padding-top:10px}
+}
+
+/* ---------- form ---------- */
+.form{margin-top:22px;display:grid;gap:12px}
+.field{display:grid;gap:5px}
+.field label,.legend{font-weight:500;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+.field input[type=text],.field input[type=email],.field input[type=tel]{width:100%;font:400 1.05rem/1.2 var(--font);color:var(--ink);background:#fff;border:2px solid transparent;border-radius:14px;padding:14px 16px;min-height:52px}
+.field input::placeholder{color:#8a8a8a}
+.field input{transition:border-color var(--fast),box-shadow var(--med) var(--ease),transform var(--fast)}
+.field input:hover{border-color:#bdbdbd}
+.field input:focus{outline:none;border-color:var(--ink);box-shadow:0 6px 18px -10px rgba(0,0,0,.35)}
+.field.err input{border-color:var(--red)}
+.msg{color:var(--red);font-weight:500;font-size:.85rem;min-height:0}
+.msg:empty{display:none}
+.two{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.chip span{display:inline-flex;align-items:center;gap:6px;background:#fff;border:2px solid transparent;border-radius:999px;padding:9px 14px;font-weight:500;font-size:.88rem;line-height:1;transition:background var(--fast),color var(--fast),border-color var(--fast),transform var(--med) var(--ease)}
+.chip:hover span{border-color:var(--ink);transform:translateY(-1px)}
+.chip:active span{transform:scale(.97)}
+.chip span::before{content:"";width:14px;height:14px;border-radius:50%;border:2px solid var(--ink);flex:none;transition:background .12s,border-color .12s}
+.chip input:checked + span{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip input:checked + span::before{background:var(--red);border-color:var(--red);box-shadow:inset 0 0 0 2px var(--ink)}
+.chip input:focus-visible + span{outline:3px solid var(--red);outline-offset:2px}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;line-height:1.35}
+.consent input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--red);flex:none}
+.consent button{background:none;border:0;padding:0;font:inherit;text-decoration:underline;cursor:pointer;color:inherit}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.micro{font-size:.8rem;color:var(--mid);text-align:center}
+.thanks{margin-top:22px;display:grid;gap:14px}
+.thanks h3{font-size:clamp(1.6rem,3.4vw,2.3rem)}
+.thanks .wa-list{display:grid;gap:10px;margin-top:4px}
+.thanks .note{font-size:.9rem}
+
+/* ---------- problem ---------- */
+.problem{background:var(--white);z-index:2}
+.qs{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.qs span{background:var(--soft);border-radius:999px;padding:12px 20px;font-weight:500;font-size:1rem;transition:background var(--fast),color var(--fast),transform var(--med) var(--ease);cursor:default}
+.qs span:nth-child(3n+1){background:var(--ink);color:#fff}
+.qs span:hover{background:var(--red);color:#fff;transform:translateY(-2px)}
+.problem .ans{margin-top:28px;max-width:60ch}
+
+/* ---------- three ways ---------- */
+.ways{background:var(--soft);z-index:3}
+.ways-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,48px);margin-top:40px}
+.way{border-top:3px solid var(--ink);padding-top:22px;display:flex;flex-direction:column;gap:14px;transition:border-color var(--med)}
+.way:hover{border-color:var(--red)}
+.way .art{color:var(--ink);width:min(100%,220px);--accent:var(--red);transition:transform var(--slow) var(--ease)}
+.way:hover .art{transform:translateX(10px)}
+.way .art [fill^="var(--accent"]{transform-box:fill-box;transform-origin:center;transition:transform var(--med) var(--ease)}
+.way:hover .art [fill^="var(--accent"]{transform:scale(1.18)}
+.way h3{font-size:1.6rem}
+.way .for{font-weight:500;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.way .tag{margin-top:auto;font-size:.85rem;color:var(--mid);border-top:1px solid #cfcfcf;padding-top:12px}
+@media(max-width:820px){.ways-grid{grid-template-columns:1fr}.way{flex-direction:row;flex-wrap:wrap;align-items:center}.way .art{width:150px}.way .txt{flex:1;min-width:200px;display:grid;gap:8px}.way .tag{width:100%}}
+@media(min-width:821px){.way .txt{display:grid;gap:12px;flex:1;align-content:start}}
+
+/* ---------- authority ---------- */
+.auth{background:var(--ink);color:#fff;z-index:4}
+.auth .kicker{color:#fff}
+.auth .kicker::before{background:var(--red)}
+.auth h2 em{font-style:normal;color:var(--red)}
+.nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,3vw,40px);margin-top:44px}
+.num{border-top:1px solid #444;padding-top:18px;transition:border-color var(--med)}
+.num:hover{border-color:var(--red)}
+.num b{transition:transform var(--med) var(--ease)}
+.num:hover b{transform:translateX(4px)}
+.num b{display:block;font-weight:700;font-size:clamp(2.6rem,7vw,5.4rem);line-height:.9;letter-spacing:-.01em}
+.num b.red{color:var(--red)}
+.num span{display:block;margin-top:10px;font-size:.98rem;color:#d4d4d4;max-width:30ch}
+@media(max-width:700px){.nums{grid-template-columns:1fr}.num{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:baseline}.num span{margin-top:0}}
+.since60 .ic{animation:bolt 2.6s ease-in-out infinite}
+@keyframes bolt{0%,80%,100%{transform:none;opacity:1}86%{transform:scale(1.25);opacity:.75}92%{transform:none;opacity:1}}
+.since60{display:inline-flex;align-items:center;gap:10px;margin-top:36px;background:var(--red);border-radius:999px;padding:10px 20px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;font-size:.9rem}
+
+/* ---------- guide ---------- */
+.guide{background:var(--grey);z-index:5}
+.guide .wrap{display:grid;gap:clamp(28px,5vw,64px);grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);align-items:start}
+.guide .cover{transform:rotate(-2deg);width:min(100%,320px);margin-inline:auto}
+.chap{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:16px}
+.chap li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.chap li{transition:transform var(--med) var(--ease)}
+.chap li:hover{transform:translateX(4px)}
+.chap .n{width:44px;height:44px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:700;font-size:1.3rem;transition:transform var(--med) var(--ease)}
+.chap li:hover .n{transform:scale(1.1)}
+.chap .n.b{background:var(--ink)}
+.chap b{display:block;font-weight:700;text-transform:uppercase;font-size:1.1rem;letter-spacing:.01em;line-height:1.1}
+.chap span{font-size:.98rem;display:block;margin-top:3px}
+.for3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:34px}
+.for3 div{background:#fff;border-radius:20px;padding:16px;display:grid;gap:8px;font-weight:500;line-height:1.2;font-size:.95rem;transition:transform var(--med) var(--ease),box-shadow var(--med) var(--ease)}
+.for3 div:hover{transform:translateY(-4px);box-shadow:0 18px 30px -18px rgba(0,0,0,.35)}
+.for3 .ic{transition:transform var(--med) var(--ease)}
+.for3 div:hover .ic{transform:scale(1.15)}
+.for3 .ic{width:28px;height:28px;color:var(--red)}
+.for3 small{display:block;font-weight:300;font-size:.85rem;color:var(--mid)}
+@media(max-width:860px){.guide .wrap{grid-template-columns:1fr}.for3{grid-template-columns:1fr}.for3 div{grid-template-columns:34px 1fr;align-items:center}}
+.guide .cta-row{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+
+/* ---------- experience ---------- */
+.exp{background:var(--white);z-index:7}
+.exp h2 em{font-style:normal;color:var(--red)}
+.exp-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,3vw,40px);margin-top:36px}
+.exp-item{border-top:3px solid var(--ink);padding-top:18px;display:grid;gap:8px;align-content:start;transition:border-color var(--med)}
+.exp-item:hover{border-color:var(--red)}
+.exp-item .ic{width:34px;height:34px;color:var(--red);transition:transform var(--med) var(--ease)}
+.exp-item:hover .ic{transform:translateY(-4px) scale(1.1)}
+.exp-item h3{font-size:1.35rem}
+.exp-item p{font-size:1rem}
+.exp .places{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+.exp .places span{background:var(--soft);border-radius:999px;padding:9px 16px;font-weight:500;font-size:.9rem;transition:background var(--fast),color var(--fast),transform var(--med) var(--ease);cursor:default}
+.exp .places span:hover{background:var(--ink);color:#fff;transform:translateY(-2px)}
+.exp .places span:first-child{background:var(--red);color:#fff}
+.exp .cta-row{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.exp small{display:block;margin-top:16px;color:var(--mid);font-size:.82rem;max-width:70ch}
+@media(max-width:980px) and (min-width:821px){.exp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:820px){.exp-grid{grid-template-columns:1fr}.exp-item{grid-template-columns:44px 1fr;column-gap:14px}.exp-item .ic{grid-row:span 2}}
+
+/* ---------- store ---------- */
+.store{background:var(--red);color:#fff;z-index:8}
+.store .kicker{color:#fff}
+.store .kicker::before{background:#fff}
+.store .wrap{display:grid;gap:clamp(28px,5vw,64px);grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}
+.svc{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px}
+.svc li{display:flex;gap:12px;align-items:flex-start;line-height:1.3}
+.svc b{font-weight:500}
+.svc .dot{width:28px;height:28px}
+.svc .dot .ic{width:15px;height:15px}
+.where{transition:transform var(--slow) var(--ease),box-shadow var(--slow) var(--ease)}
+.where:hover{transform:translateY(-4px);box-shadow:0 30px 50px -30px rgba(0,0,0,.5)}
+.where{background:#fff;color:var(--ink);border-radius:36px 36px 36px clamp(48px,9vw,96px);padding:clamp(24px,3.5vw,40px);display:grid;gap:18px}
+.where h3{font-size:1.6rem}
+.where .row{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start}
+.where .row .ic{color:var(--red);width:24px;height:24px}
+.hours{width:100%;border-collapse:collapse;font-size:.98rem}
+.hours td{padding:5px 0;border-bottom:1px solid var(--soft)}
+.hours td:last-child{text-align:right;font-weight:500;font-variant-numeric:tabular-nums}
+.hours tr.today td{color:var(--red);font-weight:500}
+.status{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:6px 14px;font-weight:500;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;background:var(--soft)}
+.status::before{content:"";width:9px;height:9px;border-radius:50%;background:#8a8a8a}
+.status.open{background:#E6F4EA;color:#0B5B2A}
+.status.open::before{background:#1B9E4B}
+.status.closed{background:#F6E3E6;color:var(--red-dk)}
+.status.closed::before{background:var(--red)}
+.where .btns{display:flex;flex-wrap:wrap;gap:10px}
+@media(max-width:860px){.store .wrap{grid-template-columns:1fr}}
+
+.pick{margin-top:30px;background:var(--ink);color:#fff;border-radius:28px 28px 28px clamp(40px,7vw,72px);padding:22px clamp(18px,3vw,28px) 24px;display:grid;grid-template-columns:110px 1fr;gap:6px 20px;align-items:center}
+.pick .art{color:#fff;--accent:var(--red);grid-row:span 2;transition:transform var(--slow) var(--ease)}
+.pick:hover .art{transform:translateX(8px)}
+.pick li{transition:background var(--fast)}
+.pick li:hover{background:var(--red)}
+.pick .lbl{font-weight:500;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:#ff8a9c}
+.pick h3{font-size:1.5rem;margin-top:4px}
+.pick p{font-size:.95rem;color:#e2e2e2;margin-top:8px}
+.pick ul{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px}
+.pick li{background:#262626;border-radius:999px;padding:6px 12px;font-weight:500;font-size:.8rem;letter-spacing:.02em}
+.pick .btn{grid-column:1/-1;margin-top:14px;justify-self:start}
+@media(max-width:520px){.pick{grid-template-columns:1fr}.pick .art{width:96px;grid-row:auto}}
+
+/* ---------- final CTA ---------- */
+.final{background:var(--white);z-index:9}
+.final .wrap{display:grid;gap:clamp(24px,5vw,60px);grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);align-items:start}
+.final .panel{border-radius:36px 36px 36px clamp(48px,9vw,110px)}
+.final h2 em{font-style:normal;color:var(--red)}
+.final .mini{display:flex;gap:16px;align-items:center;margin-top:28px}
+.final .mini .cover{width:110px;transform:rotate(-3deg);box-shadow:0 14px 26px -12px rgba(0,0,0,.5);flex:none}
+@media(max-width:860px){.final .wrap{grid-template-columns:1fr}}
+
+/* ---------- FAQ ---------- */
+.faq{background:var(--soft);z-index:10}
+.faq .list{margin-top:30px;display:grid;gap:10px;max-width:860px}
+details{background:#fff;border-radius:22px;padding:0}
+details{transition:box-shadow var(--med) var(--ease),transform var(--med) var(--ease)}
+details:hover{box-shadow:0 12px 26px -18px rgba(0,0,0,.35)}
+details[open]{box-shadow:0 16px 30px -20px rgba(0,0,0,.35)}
+details .a{animation:faqIn var(--med) var(--ease)}
+@keyframes faqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+summary{cursor:pointer;list-style:none;padding:18px 22px;font-weight:500;font-size:1.05rem;line-height:1.3;display:flex;gap:16px;align-items:center;justify-content:space-between}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:none;width:30px;height:30px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:500;font-size:1.3rem;line-height:1;transition:transform var(--med) var(--ease),background var(--fast)}
+summary:hover::after{transform:rotate(90deg);background:var(--ink)}
+details[open] summary::after{transform:rotate(45deg)}
+details .a{padding:0 22px 20px;max-width:70ch}
+details .a p+p{margin-top:10px}
+
+/* ---------- footer ---------- */
+footer{position:relative;z-index:11;background:var(--ink);color:#fff;margin-top:calc(var(--r) * -1);border-radius:var(--r) var(--r) 0 0;padding-block:calc(var(--r) + 36px) 40px}
+footer .cols{display:grid;gap:32px;grid-template-columns:1.2fr 1fr 1fr}
+footer .flogo{display:flex;align-items:center;gap:18px}
+footer img{height:64px;width:auto;display:block}
+footer .mark2{display:block;width:44px}
+footer .flogo .mark2 img{height:auto;width:100%}
+footer h4{margin:0 0 10px;font-weight:500;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;color:#bdbdbd}
+footer p,footer li{font-size:.98rem;color:#e6e6e6}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.soc{display:flex;gap:10px;margin-top:6px;flex-wrap:wrap}
+.soc a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;background:#222;border-radius:999px;padding:8px 14px 8px 8px;font-weight:500;font-size:.9rem}
+.soc a{transition:background var(--fast),transform var(--med) var(--ease)}
+.soc a:hover{background:#333;transform:translateY(-3px)}
+.soc svg{width:26px;height:26px}
+.legal{margin-top:36px;padding-top:20px;border-top:1px solid #333;font-size:.82rem;color:#a8a8a8;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.legal button{background:none;border:0;padding:0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer}
+@media(max-width:820px){footer .cols{grid-template-columns:1fr}}
+dialog{max-width:640px;width:calc(100% - 32px);border:0;border-radius:28px;padding:28px;background:#fff;color:var(--ink);font-family:var(--font)}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+dialog h3{font-size:1.5rem;margin-bottom:12px}
+dialog p{font-size:.95rem;margin-top:10px}
+dialog .btn{margin-top:18px}
+
+/* ---------- sticky mobile CTA ---------- */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(17,17,17,.96);display:none;transform:translateY(110%);transition:transform var(--med) var(--ease)}
+.sticky.show{transform:none}
+.sticky .btn{width:100%;justify-content:space-between}
+@media(max-width:860px){.sticky{display:block}}
+/* ---------- reveal on scroll (só com JS; sem JS tudo fica visível) ---------- */
+.js [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity var(--slow) var(--ease),transform var(--slow) var(--ease);transition-delay:calc(var(--i,0) * 70ms)}
+.js [data-reveal].in{opacity:1;transform:none}
+.js [data-reveal].in:hover{transition-delay:0s}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}.js [data-reveal]{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a href="#topo" aria-label="Cicle Dois Irmãos"><img src="assets/img/logo-cicle.png" alt="Cicle Dois Irmãos" width="92" height="40"></a>
+    <nav>
+      <a class="wa" href="https://wa.me/5524988658380?text=Oi!%20Vim%20pelo%20site%20da%20Cicle%20Dois%20Irm%C3%A3os." target="_blank" rel="noopener" data-wa><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3.5 20.5 L5 16 A8.5 8.5 0 1 1 8 19 Z"/><path d="M9 8.5 C9 12 12 15 15.5 15 L16.5 13.5 L14.5 12.5 L13.5 13.5 C12 13 11 12 10.5 10.5 L11.5 9.5 L10.5 7.5 Z" stroke-width="1.5"/></svg><span>WhatsApp</span></a>
+      <a class="btn light sm" href="#baixar" data-cta>Baixar o guia <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 12 H5 M11 5 L4 12 L11 19"/></svg></a>
+    </nav>
+  </div>
+</header>
+
+<main id="topo">
+<section class="hero" id="baixar">
+  <div class="wrap">
+    <div class="panel">
+      <span class="mark" aria-hidden="true"><img src="assets/img/marca-raio.png" alt="" width="48" height="58"></span>
+      <span class="seal"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 12.5 L10 17.5 L19 7"/></svg> <span id="seal-text">Desde 1967 em Resende: bicicleta e mobilidade</span></span>
+      <h1 id="h1">Bike, bike elétrica ou scooter? <em>Descubra qual é a sua</em> com quem entende de mobilidade há quase 60 anos</h1>
+      <p class="sub" id="sub">Baixe grátis o Guia Completo da Nova Mobilidade: 4 capítulos para escolher, usar e cuidar bem, do trajeto de casa ao trabalho até a trilha.</p>
+      <form class="form lead" data-p="f1-" novalidate>
+        <div class="two">
+          <div class="field"><label for="f1-nome">Nome</label><input type="text" id="f1-nome" name="nome" autocomplete="name" placeholder="Seu nome"><div class="msg" id="f1-nome-msg" role="alert"></div></div>
+          <div class="field"><label for="f1-zap">WhatsApp</label><input type="tel" id="f1-zap" name="whatsapp" inputmode="numeric" autocomplete="tel-national" placeholder="(24) 99999-9999"><div class="msg" id="f1-zap-msg" role="alert"></div></div>
+        </div>
+        <div class="field"><label for="f1-email">E-mail</label><input type="email" id="f1-email" name="email" autocomplete="email" placeholder="voce@email.com"><div class="msg" id="f1-email-msg" role="alert"></div></div>
+        <fieldset><legend class="legend">O que você procura?</legend><div class="chips"><label class="chip"><input type="checkbox" name="interesses" value="Bike tradicional" id="f1-i0"><span>Bike tradicional</span></label><label class="chip"><input type="checkbox" name="interesses" value="Bike assistida (elétrica)" id="f1-i1"><span>Bike assistida (elétrica)</span></label><label class="chip"><input type="checkbox" name="interesses" value="Scooter elétrica" id="f1-i2"><span>Scooter elétrica</span></label><label class="chip"><input type="checkbox" name="interesses" value="Manutenção especializada" id="f1-i3"><span>Manutenção especializada</span></label><label class="chip"><input type="checkbox" name="interesses" value="Bike Fit" id="f1-i4"><span>Bike Fit</span></label><label class="chip"><input type="checkbox" name="interesses" value="Acessórios" id="f1-i5"><span>Acessórios</span></label><label class="chip"><input type="checkbox" name="interesses" value="Revisão" id="f1-i6"><span>Revisão</span></label></div><div class="msg" id="f1-int-msg" role="alert"></div></fieldset>
+        <div class="hp" aria-hidden="true"><label for="f1-site">Não preencha</label><input type="text" id="f1-site" name="site" tabindex="-1" autocomplete="off"></div>
+        <label class="consent"><input type="checkbox" id="f1-ok" name="consent"><span>Concordo em receber o guia e conteúdos da Cicle Dois Irmãos por WhatsApp e e-mail, sobre os assuntos que marquei. Posso pedir para parar a qualquer momento. <button type="button" data-privacy>Ver Política de Privacidade</button></span></label>
+        <div class="msg" id="f1-ok-msg" role="alert"></div>
+        <button type="submit" class="btn block" data-submit-label>Quero o guia grátis <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 12 H5 M11 5 L4 12 L11 19"/></svg></button>
+        <p class="micro">É grátis. Você baixa na hora e ainda recebe o guia no WhatsApp e no e-mail.</p>
+      </form>
+      <div class="thanks" hidden></div>
+    </div>
+    <div class="side">
+      <div class="cover"><picture><source type="image/webp" srcset="assets/img/capa-guia-480.webp 480w, assets/img/capa-guia.webp 909w" sizes="(max-width:900px) 80vw, 340px"><img src="assets/img/capa-guia.jpg" alt="Capa do e-book O Guia Completo da Nova Mobilidade" width="909" height="1287" fetchpriority="high" decoding="async"></picture></div>
+      <ul class="checks">
+        <li><span class="dot"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 12.5 L10 17.5 L19 7"/></svg></span><div><b>Escolha certa</b><span class="t">Bike, bike elétrica ou scooter: qual combina com a sua rotina.</span></div></li>
+        <li><span class="dot"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 12.5 L10 17.5 L19 7"/></svg></span><div><b>Mais segurança</b><span class="t">Regras de trânsito, bateria e hábitos que reduzem o risco.</span></div></li>
+        <li><span class="dot"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 12.5 L10 17.5 L19 7"/></svg></span><div><b>Equipamento que dura</b><span class="t">Checklist de manutenção para imprimir.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec problem">
+  <div class="wrap">
+    <div class="kicker">Antes de comprar</div>
+    <h2>Escolher errado custa caro. <span style="color:var(--red)">Escolher certo muda a sua rotina.</span></h2>
+    <div class="qs" aria-label="Dúvidas comuns">
+      <span>Bike, bike elétrica ou scooter?</span>
+      <span>Preciso de habilitação?</span>
+      <span>Quanto rende a bateria de verdade?</span>
+      <span>Que tamanho de quadro eu uso?</span>
+      <span>Onde posso rodar sem multa?</span>
+      <span>Como faço tudo isso durar?</span>
+    </div>
+    <p class="lead ans">São as perguntas que a gente responde todos os dias no balcão e na oficina. Juntamos as respostas em um guia curto, sem enrolação, para você decidir com segurança.</p>
+  </div>
+</section>
+
+<section class="sec ways">
+  <div class="wrap">
+    <div class="kicker">Três jeitos de se mover</div>
+    <h2>Cada rotina pede a sua.</h2>
+    <div class="ways-grid">
+      <article class="way">
+        <div class="art"><svg class="ic-vehicle" viewBox="0 0 160 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="34" cy="66" r="22"/><circle cx="126" cy="66" r="22"/><path d="M34 66 L58 32 M34 66 L68 66 M68 66 L58 32 M58 32 L112 32 M68 66 L112 32 M112 32 L126 66"/><path d="M47 25 H66 M58 32 L57 25"/><path d="M112 32 L108 19 H121"/><circle cx="68" cy="66" r="3.5" fill="currentColor" stroke="none"/></svg></div>
+        <div class="txt">
+          <div class="for">Trajetos curtos, exercício</div>
+          <h3>Bicicleta</h3>
+          <p>A opção mais simples e barata de manter. Ótima para até uns 5 km e para quem quer pedalar de verdade.</p>
+        </div>
+        <p class="tag">Da cidade à trilha: urbana, híbrida, estrada e MTB.</p>
+      </article>
+      <article class="way">
+        <div class="art"><svg class="ic-vehicle" viewBox="0 0 160 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="34" cy="66" r="22"/><circle cx="126" cy="66" r="22"/><path d="M34 66 L58 32 M34 66 L68 66 M68 66 L58 32 M58 32 L112 32 M68 66 L112 32 M112 32 L126 66"/><path d="M47 25 H66 M58 32 L57 25"/><path d="M112 32 L108 19 H121"/><circle cx="68" cy="66" r="3.5" fill="currentColor" stroke="none"/><circle cx="68" cy="66" r="8.5" fill="var(--accent,#C50021)" stroke="none"/><rect x="74" y="42" width="27" height="9" rx="3" transform="rotate(-40 87 46)" fill="var(--accent,#C50021)" stroke="none"/><path d="M146 8 L138 22 H146 L142 34 L154 18 H146 Z" fill="var(--accent,#C50021)" stroke="none"/></svg></div>
+        <div class="txt">
+          <div class="for">Ladeiras, distâncias médias</div>
+          <h3>Bike elétrica</h3>
+          <p>Você pedala e o motor ajuda. Sobe morro sem chegar suado e vai mais longe.</p>
+        </div>
+        <p class="tag">Assistida, até 1.000 W e 32 km/h: sem CNH e sem placa.</p>
+      </article>
+      <article class="way">
+        <div class="art"><svg class="ic-vehicle" viewBox="0 0 160 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="34" cy="72" r="16"/><circle cx="128" cy="72" r="16"/><rect x="22" y="43" width="44" height="10" rx="5" fill="currentColor" stroke="none"/><path d="M32 50 Q36 68 58 68 H102 Q110 68 110 60"/><path d="M110 60 L117 26 M107 22 H128 M111 22 L107 11 M124 22 L128 11"/><path d="M119 32 L128 72"/><circle cx="121" cy="36" r="5.5" fill="var(--accent,#C50021)" stroke="none"/><path d="M120 46 H146 L142 58 H123 Z"/><path d="M78 34 L70 46 H78 L75 56 L86 42 H78 Z" fill="var(--accent,#C50021)" stroke="none"/></svg></div>
+        <div class="txt">
+          <div class="for">Praticidade no dia a dia</div>
+          <h3>Scooter elétrica</h3>
+          <p>Acelerador, sem pedalar. Compacta, rápida de usar e boa para trajetos curtos e médios.</p>
+        </div>
+        <p class="tag">Autopropelida, até 1.000 W e 32 km/h: sem CNH e sem placa.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec auth on-dark">
+  <div class="wrap">
+    <div class="kicker">Quem responde</div>
+    <h2>Desde 1967 em Resende. <em>E na mobilidade elétrica desde 2017.</em></h2>
+    <p class="lead">O que está neste guia é o que a gente vive: décadas de balcão, oficina e conversa franca com quem pedala e com quem está começando.</p>
+    <div class="nums">
+      <div class="num"><b>1967</b><span>Bicicleta, peças e oficina em Resende.</span></div>
+      <div class="num"><b class="red">2017</b><span>Bike elétrica e scooter elétrica na loja.</span></div>
+      <div class="num"><b>RETÜL</b><span>Bike Fit: a bike ajustada ao seu corpo.</span></div>
+    </div>
+    <div class="since60"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M13 2 L5 13.5 H11.5 L10.5 22 L19 10 H12.5 Z"/></svg> Em 2027, 60 anos de história</div>
+  </div>
+</section>
+
+<section class="sec guide">
+  <div class="wrap">
+    <div class="cover"><picture><source type="image/webp" srcset="assets/img/capa-guia-480.webp 480w, assets/img/capa-guia.webp 909w" sizes="(max-width:860px) 80vw, 320px"><img src="assets/img/capa-guia.jpg" alt="Capa do e-book" width="909" height="1287" loading="lazy" decoding="async"></picture></div>
+    <div>
+      <div class="kicker">O que tem no guia</div>
+      <h2>Quatro capítulos e um checklist para imprimir.</h2>
+      <ol class="chap">
+        <li><span class="n">1</span><div><b>O start na mobilidade</b><span>Como escolher, o que a Resolução 996/2023 diz, mitos e verdades da bateria, segurança no trânsito, saúde e wellness.</span></div></li>
+        <li><span class="n">2</span><div><b>Desbravando novos horizontes</b><span>Sua primeira mountain bike, equipamentos essenciais, pilotagem básica e o turismo de experiência nas trilhas e cachoeiras da Mantiqueira.</span></div></li>
+        <li><span class="n">3</span><div><b>Performance e evolução</b><span>Bike Fit, treino sem overtraining e a ordem certa para investir em upgrades.</span></div></li>
+        <li><span class="n">4</span><div><b>O segredo da durabilidade</b><span>Checklist caseiro, sinais de alerta e o cuidado especial com motor e bateria.</span></div></li>
+        <li><span class="n b">+</span><div><b>Bônus</b><span>Checklist de manutenção para imprimir e prender na garagem.</span></div></li>
+      </ol>
+      <div class="for3">
+        <div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="6" cy="18" r="2.6"/><circle cx="18" cy="6" r="2.6"/><path d="M8.6 18 H14 A3.5 3.5 0 0 0 14 11 H10 A3.5 3.5 0 0 1 10 4 H15.4"/></svg><p>Vai usar no dia a dia<small>Capítulos 1 e 4</small></p></div>
+        <div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 19 L9 8 L13 14 L16 10 L21 19 Z"/><circle cx="17.5" cy="5.5" r="2"/></svg><p>Quer encarar a trilha<small>Capítulos 2 e 4</small></p></div>
+        <div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="5" r="2.4"/><path d="M12 8 V14 M12 14 L8 21 M12 14 L16 21 M6 10.5 L12 9 L18 10.5"/></svg><p>Quer pedalar melhor<small>Capítulos 3 e 4</small></p></div>
+      </div>
+      <div class="cta-row"><a class="btn" href="#baixar" data-cta id="cta-guide">Quero o guia grátis <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 12 H5 M11 5 L4 12 L11 19"/></svg></a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec exp">
+  <div class="wrap">
+    <div class="kicker">Turismo de experiência e wellness</div>
+    <h2>A Mantiqueira está aqui do lado. <em>Bora pedalar?</em></h2>
+    <p class="lead">Resende fica na porta da Serra da Mantiqueira. Trilhas, cachoeiras, matas de araucária e estradas de serra a poucos quilômetros da loja: pedalar aqui é conhecer o lugar de um jeito que o carro não mostra, e ainda cuidar da saúde e da cabeça no caminho.</p>
+    <div class="exp-grid">
+      <div class="exp-item"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 19 L9 8 L13 14 L16 10 L21 19 Z"/><circle cx="17.5" cy="5.5" r="2"/></svg><h3>Trilhas</h3><p>Do passeio leve ao desafio de serra. A bike certa deixa cada trecho mais seguro e mais divertido.</p></div>
+      <div class="exp-item"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3 C8.5 8 6 11 6 14.5 A6 6 0 0 0 18 14.5 C18 11 15.5 8 12 3 Z"/><path d="M9.5 15 A2.6 2.6 0 0 0 12 17.4" stroke-width="1.6"/></svg><h3>Cachoeiras</h3><p>Pedale, chegue suado e mergulhe. O melhor destino de um pedal costuma ter água gelada no fim.</p></div>
+      <div class="exp-item"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 20.5 C5 15 3 11.8 3 8.8 A4.6 4.6 0 0 1 12 6.6 A4.6 4.6 0 0 1 21 8.8 C21 11.8 19 15 12 20.5 Z"/></svg><h3>Saúde e wellness</h3><p>O trajeto do dia a dia vira exercício. Movimento, ar livre e menos trânsito parado fazem bem ao corpo e à cabeça.</p></div>
+      <div class="exp-item"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="6" cy="18" r="2.6"/><circle cx="18" cy="6" r="2.6"/><path d="M8.6 18 H14 A3.5 3.5 0 0 0 14 11 H10 A3.5 3.5 0 0 1 10 4 H15.4"/></svg><h3>Roteiro sem pressa</h3><p>Parar na cachoeira, comer bem, conhecer o lugar. É isso o turismo de experiência sobre duas rodas.</p></div>
+    </div>
+    <div class="places" aria-label="Destinos da região"><span>Visconde de Mauá</span><span>Parque Nacional do Itatiaia</span><span>Parque Estadual da Pedra Selada</span></div>
+    <div class="cta-row"><a class="btn" href="#baixar" data-cta>Guia com dicas de trilha <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 12 H5 M11 5 L4 12 L11 19"/></svg></a></div>
+    <small>O capítulo 2 do guia traz o que levar e como se preparar. Confira sempre as regras e os horários de cada parque ou trilha antes de sair. Em caso de dúvida sobre a sua saúde, converse com um profissional antes de aumentar o esforço.</small>
+  </div>
+</section>
+
+<section class="sec store">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Depois do guia</div>
+      <h2>Venha ver de perto e fazer test drive.</h2>
+      <p class="lead">Bike elétrica e scooter elétrica são coisas que a gente entende melhor com a mão no guidão. Passe na loja, tire todas as dúvidas e faça o test drive.</p>
+      <ul class="svc">
+        <li><span class="dot"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 12.5 L10 17.5 L19 7"/></svg></span><div><b>Bicicletas e acessórios</b> para todos os perfis, da cidade à trilha.</div></li>
+        <li><span class="dot"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 12.5 L10 17.5 L19 7"/></svg></span><div><b>Bike elétrica e scooter elétrica</b> para ver de perto e testar.</div></li>
+        <li><span class="dot"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 12.5 L10 17.5 L19 7"/></svg></span><div><b>Oficina especializada</b> em todo tipo de mobilidade, inclusive scooters de qualquer marca.</div></li>
+        <li><span class="dot"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 12.5 L10 17.5 L19 7"/></svg></span><div><b>Bike Fit RETÜL</b> e revisão completa.</div></li>
+      </ul>
+      <div class="pick">
+        <div class="art"><svg class="ic-vehicle" viewBox="0 0 160 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="34" cy="66" r="22"/><circle cx="126" cy="66" r="22"/><path d="M34 66 L58 32 M34 66 L68 66 M68 66 L58 32 M58 32 L112 32 M68 66 L112 32 M112 32 L126 66"/><path d="M47 25 H66 M58 32 L57 25"/><path d="M112 32 L108 19 H121"/><circle cx="68" cy="66" r="3.5" fill="currentColor" stroke="none"/></svg></div>
+        <div>
+          <div class="lbl">Mountain bike na loja</div>
+          <h3>Absolute Nero 6</h3>
+          <p>Hardtail aro 29, boa para começar na trilha sem pagar por peça que você não vai usar.</p>
+        </div>
+        <ul aria-label="Especificações"><li>Aro 29</li><li>Suspensão 100 mm com trava</li><li>Freio a disco hidráulico</li><li>Transmissão 1x12</li><li>Quadros 17 e 19</li></ul>
+        <a class="btn sm" data-wa href="https://wa.me/5524988658380?text=Oi!%20Quero%20saber%20mais%20sobre%20a%20Absolute%20Nero%206." target="_blank" rel="noopener">Perguntar sobre a Nero 6 <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 12 H5 M11 5 L4 12 L11 19"/></svg></a>
+      </div>
+    </div>
+    <div class="where" id="loja">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><h3>Cicle Dois Irmãos</h3><span class="status" id="status">Confira o horário</span></div>
+      <div class="row"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 21.5 C7 15.5 5 12.5 5 9.5 A7 7 0 0 1 19 9.5 C19 12.5 17 15.5 12 21.5 Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><p>Av. Gustavo Jardim, 121 - Centro<br>Resende - RJ, 27511-360</p></div>
+      <div class="row"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6.5 V12 L16 14"/></svg>
+        <table class="hours" aria-label="Horário de funcionamento">
+          <tr data-d="1,2,3,4,5"><td>Segunda a sexta</td><td>9h às 18h30</td></tr>
+          <tr data-d="6"><td>Sábado</td><td>9h às 14h</td></tr>
+          <tr data-d="0"><td>Domingo</td><td>Fechado</td></tr>
+        </table>
+      </div>
+      <div class="row"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3.5 20.5 L5 16 A8.5 8.5 0 1 1 8 19 Z"/><path d="M9 8.5 C9 12 12 15 15.5 15 L16.5 13.5 L14.5 12.5 L13.5 13.5 C12 13 11 12 10.5 10.5 L11.5 9.5 L10.5 7.5 Z" stroke-width="1.5"/></svg><p><a href="https://wa.me/5524988658380" target="_blank" rel="noopener" data-wa>(24) 98865-8380</a></p></div>
+      <div class="btns">
+        <a class="btn sm" data-wa href="https://wa.me/5524988658380?text=Oi!%20Quero%20agendar%20um%20test%20drive." target="_blank" rel="noopener">Agendar test drive <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 12 H5 M11 5 L4 12 L11 19"/></svg></a>
+        <a class="btn sm dark" href="https://www.google.com/maps/search/?api=1&query=Cicle+Dois+Irm%C3%A3os+Av.+Gustavo+Jardim+121+Resende+RJ" target="_blank" rel="noopener">Como chegar <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 12 H5 M11 5 L4 12 L11 19"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="depoimentos" hidden>
+  <!-- Depoimentos REAIS de clientes entram aqui (remova o atributo hidden). Não publique depoimentos inventados. -->
+</section>
+
+<section class="sec final" id="baixar-2">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Grátis, em PDF</div>
+      <h2>Escolha certo. <em>Ande mais seguro.</em></h2>
+      <p class="lead">Baixe o guia agora e leve as respostas para a sua próxima decisão, seja uma bike, uma elétrica ou uma scooter.</p>
+      <div class="mini">
+        <div class="cover"><picture><source type="image/webp" srcset="assets/img/capa-guia-480.webp"><img src="assets/img/capa-guia.jpg" alt="" width="909" height="1287" loading="lazy" decoding="async"></picture></div>
+        <p style="font-size:.95rem;max-width:30ch"><b>O Guia Completo da Nova Mobilidade</b><br>Do urbano à trilha. PDF, grátis.</p>
+      </div>
+    </div>
+    <div class="panel">
+      <span class="seal"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 12.5 L10 17.5 L19 7"/></svg> Guia grátis</span>
+      <form class="form lead" data-p="f2-" novalidate>
+        <div class="two">
+          <div class="field"><label for="f2-nome">Nome</label><input type="text" id="f2-nome" name="nome" autocomplete="name" placeholder="Seu nome"><div class="msg" id="f2-nome-msg" role="alert"></div></div>
+          <div class="field"><label for="f2-zap">WhatsApp</label><input type="tel" id="f2-zap" name="whatsapp" inputmode="numeric" autocomplete="tel-national" placeholder="(24) 99999-9999"><div class="msg" id="f2-zap-msg" role="alert"></div></div>
+        </div>
+        <div class="field"><label for="f2-email">E-mail</label><input type="email" id="f2-email" name="email" autocomplete="email" placeholder="voce@email.com"><div class="msg" id="f2-email-msg" role="alert"></div></div>
+        <fieldset><legend class="legend">O que você procura?</legend><div class="chips"><label class="chip"><input type="checkbox" name="interesses" value="Bike tradicional" id="f2-i0"><span>Bike tradicional</span></label><label class="chip"><input type="checkbox" name="interesses" value="Bike assistida (elétrica)" id="f2-i1"><span>Bike assistida (elétrica)</span></label><label class="chip"><input type="checkbox" name="interesses" value="Scooter elétrica" id="f2-i2"><span>Scooter elétrica</span></label><label class="chip"><input type="checkbox" name="interesses" value="Manutenção especializada" id="f2-i3"><span>Manutenção especializada</span></label><label class="chip"><input type="checkbox" name="interesses" value="Bike Fit" id="f2-i4"><span>Bike Fit</span></label><label class="chip"><input type="checkbox" name="interesses" value="Acessórios" id="f2-i5"><span>Acessórios</span></label><label class="chip"><input type="checkbox" name="interesses" value="Revisão" id="f2-i6"><span>Revisão</span></label></div><div class="msg" id="f2-int-msg" role="alert"></div></fieldset>
+        <div class="hp" aria-hidden="true"><label for="f2-site">Não preencha</label><input type="text" id="f2-site" name="site" tabindex="-1" autocomplete="off"></div>
+        <label class="consent"><input type="checkbox" id="f2-ok" name="consent"><span>Concordo em receber o guia e conteúdos da Cicle Dois Irmãos por WhatsApp e e-mail, sobre os assuntos que marquei. Posso pedir para parar a qualquer momento. <button type="button" data-privacy>Ver Política de Privacidade</button></span></label>
+        <div class="msg" id="f2-ok-msg" role="alert"></div>
+        <button type="submit" class="btn block" data-submit-label>Quero o guia grátis <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 12 H5 M11 5 L4 12 L11 19"/></svg></button>
+        <p class="micro">É grátis. Você baixa na hora e ainda recebe o guia no WhatsApp e no e-mail.</p>
+      </form>
+      <div class="thanks" hidden></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec faq">
+  <div class="wrap">
+    <div class="kicker">Dúvidas frequentes</div>
+    <h2>Perguntas que a gente ouve toda semana.</h2>
+    <div class="list">
+      <details><summary>O guia é gratuito?</summary><div class="a"><p>Sim. Você preenche o formulário e baixa o PDF na hora. Sem custo e sem compromisso de compra.</p></div></details>
+      <details><summary>Preciso de habilitação para usar bike elétrica ou scooter?</summary><div class="a"><p>Depende da categoria. Pela Resolução 996/2023 do Contran, bicicleta elétrica (assistida) e autopropelido, como a scooter elétrica, de até 1.000 W e 32 km/h não exigem CNH nem placa. Acima disso, o equipamento passa a ser tratado como ciclomotor, com ACC ou CNH A, registro, placa e capacete.</p><p>Estados e municípios podem ter regras próprias. O guia explica tudo em detalhe.</p></div></details>
+      <details><summary>Vocês consertam scooter de qualquer marca?</summary><div class="a"><p>Sim. Nossa oficina atende todo tipo de mobilidade e, nas scooters, qualquer marca.</p></div></details>
+      <details><summary>Posso fazer test drive?</summary><div class="a"><p>Pode. Na loja você vê de perto a bike elétrica e a scooter elétrica, tira as dúvidas e faz o test drive. Chame no WhatsApp para combinar o melhor horário.</p></div></details>
+      <details><summary>O que é o Bike Fit RETÜL?</summary><div class="a"><p>É o ajuste da bicicleta ao seu corpo, à sua flexibilidade e ao seu jeito de pedalar, feito com o sistema RETÜL. O resultado é mais conforto, mais eficiência e menos risco de lesão.</p></div></details>
+      <details><summary>Como vocês usam meus dados?</summary><div class="a"><p>Só para enviar o guia e, se você quiser, falar sobre os assuntos que marcou. Nada de venda de dados. Veja a <button type="button" data-privacy style="background:none;border:0;padding:0;font:inherit;text-decoration:underline;cursor:pointer;color:var(--red)">política de privacidade</button>.</p></div></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="flogo"><span class="mark2" aria-hidden="true"><img src="assets/img/marca-raio-branca.png" alt="" width="40" height="48"></span><img src="assets/img/logo-cicle.png" alt="Cicle Dois Irmãos" width="148" height="64"></div>
+        <p style="margin-top:14px;max-width:32ch">Sua escolha desde 1967. Bicicletas, bike elétrica, scooter elétrica, acessórios e oficina em Resende.</p>
+      </div>
+      <div>
+        <h4>Visite</h4>
+        <ul>
+          <li>Av. Gustavo Jardim, 121 - Centro</li>
+          <li>Resende - RJ, 27511-360</li>
+          <li style="margin-top:8px">Seg a sex, 9h às 18h30</li>
+          <li>Sábado, 9h às 14h</li>
+          <li>Domingo, fechado</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fale com a gente</h4>
+        <ul><li><a href="https://wa.me/5524988658380" target="_blank" rel="noopener" data-wa>WhatsApp (24) 98865-8380</a></li></ul>
+        <div class="soc">
+          <a href="https://www.instagram.com/cicledoisirmaos" target="_blank" rel="noopener"><svg class="soc" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="35" cy="35" r="35" fill="#fff"/><rect x="17" y="17" width="36" height="36" rx="11" fill="none" stroke="#111" stroke-width="5"/><circle cx="35" cy="35" r="8.5" fill="none" stroke="#111" stroke-width="5"/><circle cx="45.5" cy="24.5" r="2.6" fill="#111"/></svg> Instagram</a>
+          <a href="https://www.tiktok.com/@cicledoisirmaos" target="_blank" rel="noopener"><svg class="soc" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="35" cy="35" r="35" fill="#fff"/><path d="M37 16 V43 A8.5 8.5 0 1 1 28.5 34.5 M37 16 C37.8 23 42 27 49 27.6" fill="none" stroke="#111" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"/></svg> TikTok</a>
+          <a href="https://www.facebook.com/cicledoisirmaos" target="_blank" rel="noopener"><svg class="soc" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="35" cy="35" r="35" fill="#fff"/><path d="M38 57 V37 H45 L46.5 29 H38 V24.5 C38 22 39.2 20.5 42 20.5 H46.5 V13.6 C45.3 13.4 42.8 13 40.4 13 C34 13 30 16.6 30 23 V29 H23 V37 H30 V57 Z" fill="#111"/></svg> Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="yr">2026</span> Cicle Dois Irmãos. @cicledoisirmaos</span>
+      <span>Regras de trânsito citadas com base na Resolução 996/2023 do Contran, conferidas em setembro de 2026. <button type="button" data-privacy>Política de privacidade</button></span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky"><a class="btn" href="#baixar" data-cta>Baixar o guia grátis <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 12 H5 M11 5 L4 12 L11 19"/></svg></a></div>
+
+<dialog id="privacy">
+  <h3>Política de privacidade</h3>
+  <p><b>Quem trata os dados:</b> Cicle Dois Irmãos, Av. Gustavo Jardim, 121 - Centro, Resende - RJ.</p>
+  <p><b>Quais dados:</b> nome, e-mail, WhatsApp e os interesses que você marcar no formulário, além de informações técnicas de navegação e da campanha de origem (UTM).</p>
+  <p><b>Para quê:</b> enviar o guia, responder ao seu contato e, se você aceitou, enviar comunicações sobre os assuntos que marcou. Você pode pedir para parar a qualquer momento.</p>
+  <p><b>Seus direitos (LGPD):</b> acessar, corrigir, portar e pedir a exclusão dos seus dados, ou retirar o consentimento, pelo WhatsApp (24) 98865-8380.</p>
+  <p><b>Compartilhamento:</b> não vendemos seus dados. Usamos ferramentas de medição e anúncios (Google, Meta, TikTok) para entender o desempenho das campanhas.</p>
+  <button class="btn sm" type="button" id="privacy-close">Fechar</button>
+</dialog>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BicycleStore","name":"Cicle Dois Irmãos","foundingDate":"1967","telephone":"+55-24-98865-8380","url":"https://cicledoisirmaos.com.br","address":{"@type":"PostalAddress","streetAddress":"Av. Gustavo Jardim, 121 - Centro","addressLocality":"Resende","addressRegion":"RJ","postalCode":"27511-360","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}],"sameAs":["https://www.instagram.com/cicledoisirmaos","https://www.tiktok.com/@cicledoisirmaos","https://www.facebook.com/cicledoisirmaos"]}</script>
+
+<script>
+(function(){
+  "use strict";
+  /* ============ CONFIG (preencher na hospedagem) ============ */
+  var CONFIG = {
+    endpoint: "",                       // URL do RAFE/CRM/webhook que recebe o lead (POST JSON). Vazio = modo demonstração.
+    whatsapp: "5524988658380",
+    pdf: "guia-nova-mobilidade.pdf"                 // caminho do PDF no site
+  };
+
+  var params = new URLSearchParams(location.search);
+  var src = (params.get("utm_source") || "").toLowerCase();
+
+  /* ============ Variações por canal ============ */
+  var V = {
+    "default":  {h1:'Bike, bike elétrica ou scooter? <em>Descubra qual é a sua</em> com quem entende de mobilidade há quase 60 anos', sub:'Baixe grátis o Guia Completo da Nova Mobilidade: 4 capítulos para escolher, usar e cuidar bem, do trajeto de casa ao trabalho até a trilha.', cta:'Quero o guia grátis'},
+    "google":   {h1:'Bicicleta, bike elétrica ou scooter elétrica? <em>Escolha certo</em> antes de comprar', sub:'Guia grátis da Cicle Dois Irmãos, em Resende: diferenças, bateria, segurança e manutenção explicadas por quem atua no segmento há quase 60 anos.', cta:'Baixar guia grátis'},
+    "instagram":{h1:'Seu trajeto mudou. <em>Sua forma de se mover também pode mudar</em>', sub:'Guia grátis: da bike à scooter elétrica, o que saber antes de escolher. Por quem pedala e conserta há quase 60 anos.', cta:'Quero o guia'},
+    "tiktok":   {h1:'Bike, bike elétrica ou scooter? <em>Bora descobrir qual combina com você</em>', sub:'Guia rápido, grátis e sem enrolação. Feito por quem vive isso há quase 60 anos em Resende.', cta:'Me manda o guia'}
+  };
+  var alias = {ig:"instagram",facebook:"instagram",fb:"instagram",meta:"instagram",instagram:"instagram",google:"google",adwords:"google",gads:"google",tiktok:"tiktok",tt:"tiktok"};
+  var key = alias[src] || "default";
+  var v = V[key];
+  var h1 = document.getElementById("h1"), sub = document.getElementById("sub");
+  if (h1) h1.innerHTML = v.h1;
+  if (sub) sub.textContent = v.sub;
+  document.querySelectorAll("[data-submit-label]").forEach(function(el){ el.firstChild.nodeValue = v.cta + " "; });
+  var p = params.get("v");   // teste A/B manual: ?v=google|instagram|tiktok
+  if (p && V[p] && !alias[src]) { h1.innerHTML = V[p].h1; sub.textContent = V[p].sub; }
+
+  /* ============ Rastreamento ============ */
+  var track = {};
+  ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","gclid","fbclid","ttclid"].forEach(function(k){ var x = params.get(k); if (x) track[k] = x; });
+  try { var saved = JSON.parse(sessionStorage.getItem("cdi_track")||"{}"); for (var k in saved) if(!(k in track)) track[k]=saved[k]; sessionStorage.setItem("cdi_track", JSON.stringify(track)); } catch(e){}
+
+  function fire(name, data){
+    try { (window.dataLayer = window.dataLayer || []).push(Object.assign({event:name}, data||{})); } catch(e){}
+  }
+  document.querySelectorAll("[data-wa]").forEach(function(a){ a.addEventListener("click", function(){ fire("whatsapp_click"); try{ window.gtag && gtag("event","whatsapp_click"); window.fbq && fbq("track","Contact"); window.ttq && ttq.track("Contact"); }catch(e){} }); });
+
+  /* ============ Formulários ============ */
+  var digits = function(s){ return (s||"").replace(/\D/g,""); };
+  function maskPhone(el){
+    el.addEventListener("input", function(){
+      var d = digits(el.value).slice(0,11), o = "";
+      if (d.length) o = "(" + d.slice(0,2);
+      if (d.length >= 3) o += ") " + d.slice(2, d.length > 10 ? 7 : 6);
+      if (d.length > (d.length > 10 ? 7 : 6)) o += "-" + d.slice(d.length > 10 ? 7 : 6);
+      el.value = o;
+    });
+  }
+  var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  document.querySelectorAll("form.lead").forEach(function(form){
+    var pre = form.getAttribute("data-p");
+    var $ = function(n){ return form.querySelector("#"+pre+n); };
+    maskPhone($("zap"));
+    var box = form.closest(".panel");
+    var thanks = box.querySelector(".thanks");
+
+    function setErr(id, msg){
+      var f = $(id).closest(".field, fieldset"); var m = form.querySelector("#"+pre+id+"-msg");
+      if (f) f.classList.toggle("err", !!msg);
+      if (m) m.textContent = msg || "";
+      return !msg;
+    }
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      if ($("site").value) return;   // honeypot
+      var nome = $("nome").value.trim(), email = $("email").value.trim(), zap = digits($("zap").value);
+      var ints = Array.prototype.map.call(form.querySelectorAll("input[name=interesses]:checked"), function(i){ return i.value; });
+      var ok = true;
+      ok = setErr("nome", nome.split(/\s+/).join("").length < 2 ? "Informe seu nome." : "") && ok;
+      ok = setErr("email", emailRe.test(email) ? "" : "Confira o e-mail: algo como nome@email.com.") && ok;
+      ok = setErr("zap", (zap.length === 10 || zap.length === 11) ? "" : "Informe o WhatsApp com DDD.") && ok;
+      var chipsMsg = form.querySelector("#"+pre+"int-msg"); chipsMsg.textContent = ints.length ? "" : "Marque pelo menos um assunto.";
+      if (!ints.length) ok = false;
+      var cMsg = form.querySelector("#"+pre+"ok-msg"); cMsg.textContent = $("ok").checked ? "" : "Precisamos do seu aceite para enviar o guia.";
+      if (!$("ok").checked) ok = false;
+      if (!ok){ var first = form.querySelector(".err input, .msg:not(:empty)"); if (first && first.scrollIntoView) first.scrollIntoView({block:"center",behavior:"smooth"}); return; }
+
+      var payload = Object.assign({
+        nome: nome, email: email, whatsapp: "55" + zap, interesses: ints,
+        consentimento: true, origem: key, pagina: location.pathname, data: new Date().toISOString()
+      }, track);
+      var btn = form.querySelector("button[type=submit]"); btn.disabled = true;
+
+      function done(){
+        fire("generate_lead", {lead_source:key, interesses: ints.join("|")});
+        try{ window.gtag && gtag("event","generate_lead",{lead_source:key}); window.fbq && fbq("track","Lead"); window.ttq && ttq.track("SubmitForm"); }catch(e){}
+        showThanks(thanks, form, nome, ints);
+        btn.disabled = false;
+      }
+      if (CONFIG.endpoint){
+        fetch(CONFIG.endpoint, {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(payload)})
+          .then(function(r){ if(!r.ok) throw new Error(r.status); done(); })
+          .catch(function(){ btn.disabled = false; cMsg.textContent = "Não conseguimos enviar agora. Tente de novo ou chame a gente no WhatsApp."; });
+      } else { setTimeout(done, 350); }   // modo demonstração (sem endpoint configurado)
+    });
+  });
+
+  var testDriveSet = ["bike assistida (elétrica)","scooter elétrica"];
+  function wa(text){ return "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(text); }
+  function showThanks(box, form, nome, ints){
+    var first = nome.split(/\s+/)[0];
+    var list = ints.length > 1 ? ints.slice(0,-1).join(", ") + " e " + ints[ints.length-1] : ints[0];
+    var html = '<h3>Pronto, ' + esc(first) + '! Seu guia está aqui.</h3>' +
+      '<p>Baixe o PDF agora e leia com calma:</p>' +
+      '<a class="btn" href="' + CONFIG.pdf + '" target="_blank" rel="noopener" download>Baixar o PDF <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 12 H5 M11 5 L4 12 L11 19"/></svg></a>' +
+      '<div class="wa-list"><p class="note"><b>Quer ajuda para escolher?</b> Você marcou interesse em ' + esc(list) + '. Fale com a gente no WhatsApp:</p>' +
+      '<a class="btn dark" href="' + wa("Oi! Baixei o Guia da Nova Mobilidade e tenho interesse em " + list + ". Podem me ajudar?") + '" target="_blank" rel="noopener" data-wa>Falar no WhatsApp <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 12 H5 M11 5 L4 12 L11 19"/></svg></a>';
+    if (ints.some(function(i){ return testDriveSet.indexOf(i) > -1; }))
+      html += '<a class="btn ghost" style="color:var(--ink)" href="' + wa("Oi! Baixei o guia e quero agendar um test drive.") + '" target="_blank" rel="noopener" data-wa>Agendar test drive <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 12 H5 M11 5 L4 12 L11 19"/></svg></a>';
+    if (ints.indexOf("Bike Fit") > -1)
+      html += '<a class="btn ghost" style="color:var(--ink)" href="' + wa("Oi! Baixei o guia e quero saber mais sobre o Bike Fit RETÜL.") + '" target="_blank" rel="noopener" data-wa>Saber sobre o Bike Fit <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 12 H5 M11 5 L4 12 L11 19"/></svg></a>';
+    html += '</div><p class="note">Siga também <a href="https://www.instagram.com/cicledoisirmaos" target="_blank" rel="noopener"><b>@cicledoisirmaos</b></a> no Instagram, TikTok e Facebook.</p>';
+    box.innerHTML = html; box.hidden = false; form.hidden = true;
+    var hd = box.previousElementSibling;
+    if (box.scrollIntoView) box.scrollIntoView({block:"center",behavior:"smooth"});
+  }
+  function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+
+  /* ============ Aberto agora ============ */
+  (function(){
+    var st = document.getElementById("status"); if (!st) return;
+    var parts = {};
+    try {
+      new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date()).forEach(function(p){ parts[p.type]=p.value; });
+    } catch(e){ return; }
+    var map = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+    var d = map[parts.weekday], min = (parseInt(parts.hour,10)%24)*60 + parseInt(parts.minute,10);
+    var win = d===0 ? null : d===6 ? [540,840] : [540,1110];
+    var open = win && min >= win[0] && min < win[1];
+    st.textContent = open ? "Aberto agora" : "Fechado agora";
+    st.className = "status " + (open ? "open" : "closed");
+    document.querySelectorAll(".hours tr").forEach(function(tr){ if (tr.getAttribute("data-d").split(",").indexOf(String(d)) > -1) tr.classList.add("today"); });
+  })();
+
+  /* ============ CTA fixo no celular ============ */
+  (function(){
+    var bar = document.getElementById("sticky"); if (!bar || !("IntersectionObserver" in window)) return;
+    var vis = {};
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ vis[e.target.id] = e.isIntersecting; });
+      var any = Object.keys(vis).some(function(k){ return vis[k]; });
+      bar.classList.toggle("show", !any && window.scrollY > 200);
+    }, {threshold:.15});
+    ["baixar","baixar-2"].forEach(function(id){ var el = document.getElementById(id); if (el) io.observe(el); });
+    window.addEventListener("scroll", function(){ if (window.scrollY <= 200) bar.classList.remove("show"); }, {passive:true});
+  })();
+
+  /* ============ Motion: reveal por scroll + sombra do header ============ */
+  (function(){
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce || !("IntersectionObserver" in window)) return;
+    document.documentElement.classList.add("js");
+    var groups = [".sec .kicker",".sec h2",".sec .lead",".ways-grid > *",".nums > *",".since60",".chap li",".for3 > div",".guide .cta-row",".guide .cover",".exp-grid > *",".exp .places",".exp .cta-row",".svc li",".pick",".where",".final .mini",".final .panel",".faq details","footer .cols > *"];
+    var els = [];
+    groups.forEach(function(sel){
+      var i = 0, lastParent = null;
+      document.querySelectorAll(sel).forEach(function(el){
+        if (el.hasAttribute("data-reveal")) return;
+        if (el.parentNode !== lastParent) { i = 0; lastParent = el.parentNode; }
+        el.setAttribute("data-reveal",""); el.style.setProperty("--i", i++); els.push(el);
+      });
+    });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, {rootMargin:"0px 0px -8% 0px", threshold:.08});
+    els.forEach(function(el){
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * .9) el.classList.add("in"); else io.observe(el);
+    });
+    var top = document.querySelector(".top");
+    var onScroll = function(){ top.classList.toggle("scrolled", window.scrollY > 24); };
+    window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
+  })();
+
+  /* ============ Privacidade ============ */
+  var dlg = document.getElementById("privacy");
+  document.querySelectorAll("[data-privacy]").forEach(function(b){ b.addEventListener("click", function(){ if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open",""); }); });
+  var pc = document.getElementById("privacy-close"); if (pc) pc.addEventListener("click", function(){ dlg.close ? dlg.close() : dlg.removeAttribute("open"); });
+  var yr = document.getElementById("yr"); if (yr) yr.textContent = new Date().getFullYear();
+})();
+</script>
+
+</body>
+</html>
