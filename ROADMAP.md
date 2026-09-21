@@ -7,7 +7,8 @@ Legenda: [ ] pendente · [x] feito · (RM) Roki Media · (CL) cliente/Eduardo
 
 ## Fase 0 — Preparação (dia 1)
 - [x] Revisar copy, e-book e index.html existente
-- [x] (RM) Repositório Git: https://github.com/rochatales/landing-cicle-dois-irmaos (privado)
+- [x] (RM) Repositório Git: https://github.com/rochatales/landing-cicle-dois-irmaos (público)
+- [x] (RM) Preview para aprovação (GitHub Pages, atualiza a cada push em `main`): https://rochatales.github.io/landing-cicle-dois-irmaos/
 - [ ] (CL) Enviar o PDF final do e-book (`guia-nova-mobilidade.pdf`)
 - [ ] (CL) Enviar acesso ao DNS de cicledoisirmaos.com.br (registro.br ou registrador) — o domínio não resolvia na auditoria de agosto
 
